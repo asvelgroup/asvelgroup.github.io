@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASVEL Group — Diversified Global Conglomerate | Dubai, UAE</title>
+
+<!-- ═══ SECURITY META TAGS ═══ -->
+<!-- Prevents the browser from guessing the content type (MIME sniffing attack) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<!-- Stops the page being embedded in iframes on other sites (clickjacking protection) -->
+<meta http-equiv="X-Frame-Options" content="DENY">
+<!-- Forces HTTPS connections only -->
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+<!-- Controls what external resources this page is allowed to load (XSS protection) -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src https://fonts.gstatic.com;
+  connect-src https://formspree.io;
+  img-src 'self' data:;
+  frame-ancestors 'none';
+">
+<!-- Prevents referrer info leaking to external sites -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Stops search engines indexing the contact form data -->
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ivory:       #FAFAF7;
+    --cream:       #F4F1EA;
+    --stone:       #E8E3D8;
+    --stone-dark:  #CEC8BA;
+    --navy:        #0E1E35;
+    --navy-mid:    #1A3050;
+    --gold:        #B8902A;
+    --gold-light:  #D4A93A;
+    --gold-pale:   #F0E6C8;
+    --copper:      #9C6B35;
+    --charcoal:    #2E2E2A;
+    --mid-grey:    #6B6862;
+    --light-grey:  #9B9890;
+    --teal:        #1D5C52;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ── CURSOR ── */
+  .cursor {
+    position: fixed; top: 0; left: 0;
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  .cursor-ring {
+    position: fixed; top: 0; left: 0;
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--navy);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 68px;
+    transition: background 0.5s, padding 0.4s, box-shadow 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(250,250,247,0.97);
+    padding: 16px 68px;
+    box-shadow: 0 1px 0 var(--stone-dark);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .nav-logo {
+    display: flex; flex-direction: column; line-height: 1; text-decoration: none;
+  }
+  .nav-logo-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .nav-logo-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 11px 26px;
+    text-decoration: none;
+    border: 1.5px solid var(--navy);
+    transition: background 0.3s, color 0.3s;
+  }
+  .nav-cta:hover { background: transparent; color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100); /* iOS Safari fix */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B8902A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 160px 68px 100px;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.63rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 34px;
+    display: flex; align-items: center; gap: 16px;
+    opacity: 0; animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); flex-shrink: 0; }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 5.2vw, 5.8rem);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    margin-bottom: 38px;
+    opacity: 0; animation: fadeUp 1s 0.65s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-desc {
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.88;
+    max-width: 450px;
+    margin-bottom: 52px;
+    opacity: 0; animation: fadeUp 1s 0.9s forwards;
+  }
+  .hero-actions {
+    display: flex; align-items: center; gap: 20px;
+    opacity: 0; animation: fadeUp 1s 1.1s forwards;
+  }
+  .btn-primary {
+    -webkit-tap-highlight-color: rgba(184,144,42,0.15);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 14px 36px;
+    text-decoration: none;
+    border: 1.5px solid var(--navy);
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: transparent; color: var(--navy); }
+  .btn-outline {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: transparent;
+    padding: 14px 36px;
+    text-decoration: none;
+    border: 1.5px solid var(--navy);
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+  }
+  .btn-outline:hover { background: var(--navy); color: var(--ivory); }
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .hero-compass {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    opacity: 0; animation: fadeIn 1.5s 1.5s forwards;
+  }
+  .compass-ring-1 { position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(184,144,42,0.22); animation: rotateSlow 80s linear infinite; }
+  .compass-ring-2 { position: absolute; inset: 44px; border-radius: 50%; border: 1px solid rgba(14,30,53,0.1); animation: rotateSlow 50s linear infinite reverse; }
+  .compass-ring-3 { position: absolute; inset: 88px; border-radius: 50%; border: 1px solid rgba(184,144,42,0.12); }
+  .compass-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero-right-stats {
+    position: absolute; bottom: 72px; left: 56px; right: 56px;
+  }
+  .hero-stat-row {
+    display: flex; gap: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--stone-dark);
+  }
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .hero-stat-num sup { font-size: 1.1rem; color: var(--gold); vertical-align: super; }
+  .hero-stat-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    margin-top: 7px;
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-strip {
+    background: var(--navy);
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  /* Pause animation on hover over the whole strip */
+  .marquee-strip:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  .marquee-track {
+    display: flex;
+    animation: marquee 35s linear infinite;
+    white-space: nowrap;
+    align-items: stretch;
+  }
+  /* Each item is now an <a> anchor — style it to look right */
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    padding: 17px 36px;
+    flex-shrink: 0;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .marquee-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 36px; right: 36px;
+    height: 1.5px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+  .marquee-item:hover {
+    background: rgba(184,144,42,0.08);
+  }
+  .marquee-item:hover::after {
+    transform: scaleX(1);
+  }
+  .marquee-item:hover span {
+    color: rgba(250,250,247,0.85);
+  }
+  .marquee-item span {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(250,250,247,0.45);
+    transition: color 0.25s ease;
+  }
+  .marquee-dot {
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .marquee-item:hover .marquee-dot {
+    transform: scale(1.6);
+  }
+
+  /* ── SHARED ── */
+  .section-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .section-tag::before { content: ''; width: 34px; height: 1px; background: var(--gold); flex-shrink: 0; }
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 3.8vw, 3.6rem);
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .section-heading em { font-style: italic; color: var(--gold); }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 130px 68px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 110px;
+    align-items: center;
+  }
+  .about-body {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.92;
+    margin-top: 32px;
+  }
+  .about-body p + p { margin-top: 20px; }
+  .pull-quote {
+    margin-top: 48px;
+    padding: 32px 36px;
+    background: var(--cream);
+    border-left: 3px solid var(--gold);
+    position: relative;
+  }
+  .pull-quote::before {
+    content: '"';
+    position: absolute; top: -16px; left: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.2;
+    line-height: 1;
+  }
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--navy);
+    line-height: 1.65;
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--stone-dark);
+    border: 1px solid var(--stone-dark);
+  }
+  .stat-box {
+    background: var(--cream);
+    padding: 48px 36px;
+    transition: background 0.3s;
+  }
+  .stat-box:hover { background: var(--stone); }
+  .stat-box.navy { background: var(--navy); }
+  .stat-box.teal { background: var(--teal); }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-num sup { font-size: 1.1rem; color: var(--gold); vertical-align: super; }
+  .stat-box.navy .stat-num,
+  .stat-box.teal .stat-num { color: var(--ivory); }
+  .stat-box.navy .stat-num sup,
+  .stat-box.teal .stat-num sup { color: var(--gold-light); }
+  .stat-lbl {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    line-height: 1.5;
+  }
+  .stat-box.navy .stat-lbl,
+  .stat-box.teal .stat-lbl { color: rgba(250,250,247,0.4); }
+
+  /* ── BUSINESSES ── */
+  .businesses {
+    background: var(--cream);
+    padding: 130px 68px;
+    border-top: 1px solid var(--stone-dark);
+    border-bottom: 1px solid var(--stone-dark);
+  }
+  .businesses-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 72px;
+  }
+  .biz-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--stone-dark);
+    border: 1px solid var(--stone-dark);
+  }
+  /* Wide card spans 2 columns */
+  .biz-card {
+    background: var(--cream);
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    display: flex; flex-direction: column;
+  }
+  .biz-card:hover { background: var(--stone); }
+  .biz-card.wide { grid-column: span 2; }
+  .biz-card-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .biz-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--stone-dark);
+  }
+  .biz-icon {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    opacity: 0.75;
+  }
+  .biz-sector {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .biz-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+  .biz-divider {
+    width: 28px; height: 1.5px;
+    background: var(--gold);
+    margin-bottom: 18px;
+    transition: width 0.4s;
+  }
+  .biz-card:hover .biz-divider { width: 56px; }
+  .biz-desc {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.78;
+    flex: 1;
+  }
+  .biz-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 24px;
+  }
+  .biz-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold-pale);
+    padding: 5px 12px;
+    border: 1px solid rgba(184,144,42,0.2);
+  }
+  .biz-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 28px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    transition: gap 0.3s, color 0.3s;
+  }
+  .biz-link:hover { gap: 14px; color: var(--gold); }
+
+  /* IT products sub-card */
+  .it-products {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .it-product {
+    padding: 18px 20px;
+    background: var(--cream);
+    border: 1px solid var(--stone-dark);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .biz-card:hover .it-product { background: var(--ivory); }
+  .it-product:hover { border-color: var(--gold) !important; }
+  .it-product-icon { font-size: 1.2rem; margin-bottom: 8px; }
+  .it-product-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .it-product-desc {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.6;
+  }
+
+  /* ── GLOBAL PRESENCE ── */
+  .presence {
+    padding: 130px 68px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 90px;
+    align-items: start;
+    border-bottom: 1px solid var(--stone-dark);
+  }
+  .region-list { margin-top: 52px; }
+  .region-item {
+    display: flex; align-items: center; gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--stone);
+    transition: padding-left 0.3s;
+  }
+  .region-item:first-child { border-top: 1px solid var(--stone); }
+  .region-item:hover { padding-left: 10px; }
+  .region-num {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--stone-dark);
+    width: 22px; flex-shrink: 0;
+  }
+  .region-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    flex: 1;
+  }
+  .region-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .region-subs {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    text-align: right;
+  }
+  .presence-right { padding-top: 72px; }
+  .presence-card {
+    background: var(--cream);
+    border: 1px solid var(--stone-dark);
+    padding: 48px 40px;
+    position: relative;
+    margin-bottom: 32px;
+  }
+  .presence-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; right: -10px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--stone-dark);
+    z-index: -1;
+  }
+  .presence-card-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--navy);
+    line-height: 1.65;
+  }
+  .presence-card-quote em { font-style: normal; color: var(--gold); }
+  .presence-nums {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px;
+  }
+  .pn-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .pn-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    margin-top: 7px;
+  }
+
+  /* ── LEADERSHIP ── */
+  .leadership {
+    padding: 130px 68px;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  .leadership::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--copper), var(--gold));
+  }
+  .leadership .section-tag { color: var(--gold-light); }
+  .leadership .section-tag::before { background: var(--gold-light); }
+  .leadership .section-heading { color: var(--ivory); }
+  .leadership .section-heading em { color: var(--gold-light); }
+  .leadership-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 72px;
+  }
+  .leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .leader-avatar {
+    width: 100%; aspect-ratio: 3/4;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 24px;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.3s;
+  }
+  .leader-card:hover .leader-avatar { border-color: rgba(184,144,42,0.45); }
+  .leader-initials {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: rgba(184,144,42,0.22);
+  }
+  .leader-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--ivory);
+    margin-bottom: 7px;
+  }
+  .leader-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(212,169,58,0.65);
+  }
+  .btn-outline-white {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    background: transparent;
+    padding: 12px 28px;
+    text-decoration: none;
+    border: 1.5px solid rgba(250,250,247,0.25);
+    transition: border-color 0.3s;
+    display: inline-block;
+  }
+  .btn-outline-white:hover { border-color: var(--ivory); }
+
+  /* ── ESG ── */
+  .esg {
+    padding: 130px 68px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+    border-top: 1px solid var(--stone-dark);
+    border-bottom: 1px solid var(--stone-dark);
+  }
+  .esg-body {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.9;
+    margin-top: 28px;
+    margin-bottom: 44px;
+  }
+  .esg-commitment {
+    padding: 28px 32px;
+    background: var(--teal);
+  }
+  .esg-c-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 8px;
+  }
+  .esg-c-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    color: var(--ivory);
+  }
+  .esg-mini-stats {
+    display: flex; gap: 28px; margin-top: 24px;
+  }
+  .esg-mini-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    color: var(--navy);
+  }
+  .esg-mini-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    margin-top: 6px;
+  }
+  .esg-pillars { display: flex; flex-direction: column; gap: 2px; }
+  .esg-pillar {
+    background: var(--cream);
+    padding: 32px 36px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .esg-pillar:hover { border-left-color: var(--gold); background: var(--stone); }
+  .esg-pillar-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .esg-pillar-icon {
+    width: 34px; height: 34px;
+    background: var(--gold-pale);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; flex-shrink: 0;
+  }
+  .esg-pillar-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .esg-pillar-body {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.75;
+  }
+
+  /* ── NEWSROOM ── */
+  .news {
+    padding: 130px 68px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--stone-dark);
+  }
+  .news-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 64px;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 28px;
+  }
+  .news-card {
+    border-top: 2px solid var(--stone-dark);
+    padding-top: 28px;
+    transition: border-top-color 0.3s;
+  }
+  .news-card:hover { border-top-color: var(--gold); }
+  .news-date {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .news-badge {
+    display: inline-block;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--stone);
+    padding: 4px 10px;
+    margin-bottom: 16px;
+  }
+  .news-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    line-height: 1.42;
+    margin-bottom: 14px;
+  }
+  .news-card:first-child .news-title { font-size: 1.6rem; }
+  .news-excerpt {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.72;
+  }
+  .news-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 20px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    transition: gap 0.3s, color 0.3s;
+  }
+  .news-link:hover { gap: 14px; color: var(--gold); }
+
+  /* ── CTA BAND ── */
+  .cta-band {
+    background: var(--navy);
+    padding: 110px 68px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-band::after {
+    content: '';
+    position: absolute;
+    right: -180px; top: 50%;
+    transform: translateY(-50%);
+    width: 560px; height: 560px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,144,42,0.07);
+    pointer-events: none;
+  }
+  .cta-band .section-tag { color: var(--gold-light); }
+  .cta-band .section-tag::before { background: var(--gold-light); }
+  .cta-band .section-heading { color: var(--ivory); }
+  .cta-band .section-heading em { color: var(--gold-light); }
+  .cta-right { display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 1; }
+  .cta-right p {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: rgba(250,250,247,0.55);
+    line-height: 1.88;
+  }
+  .cta-buttons { display: flex; flex-direction: column; gap: 14px; }
+  .btn-gold {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--gold);
+    padding: 15px 36px;
+    text-decoration: none;
+    border: 1.5px solid var(--gold);
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+  }
+  .btn-gold:hover { background: transparent; color: var(--gold); }
+  .cta-hq {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(250,250,247,0.25);
+    line-height: 1.85;
+    padding-top: 4px;
+    border-top: 1px solid rgba(250,250,247,0.08);
+  }
+
+  /* ── FOOTER (LIGHT) ── */
+  footer {
+    background: var(--cream);
+    padding: 80px 68px 44px;
+    border-top: 1px solid var(--stone-dark);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr 1fr;
+    gap: 56px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid var(--stone-dark);
+    margin-bottom: 36px;
+  }
+  .footer-brand-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .footer-brand-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+  .footer-tagline {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.8;
+    max-width: 290px;
+    margin-bottom: 28px;
+  }
+  .footer-social {
+    display: flex; gap: 12px;
+  }
+  .social-btn {
+    width: 36px; height: 36px;
+    border: 1px solid var(--stone-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem;
+    color: var(--mid-grey);
+    text-decoration: none;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-col-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--stone-dark);
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--navy); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy {
+    font-size: 0.76rem;
+    color: var(--light-grey);
+  }
+  .footer-offices {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .form-error-msg {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    color: #C0392B;
+    margin-top: 5px;
+    display: none;
+    align-items: center;
+    gap: 5px;
+  }
+  .form-error-msg.visible { display: flex; }
+  .form-input.error,
+  .form-select.error,
+  .form-textarea.error {
+    border-color: #C0392B !important;
+    box-shadow: 0 0 0 3px rgba(192,57,43,0.08);
+  }
+  .form-input.ok,
+  .form-select.ok,
+  .form-textarea.ok {
+    border-color: var(--teal) !important;
+  }
+  /* Honeypot — invisible to humans, bots fill it in */
+  .hp-field { 
+    position: absolute; 
+    left: -9999px; 
+    top: -9999px; 
+    opacity: 0; 
+    pointer-events: none; 
+    tab-index: -1;
+  }
+  /* Rate limit warning */
+  .form-rate-warning {
+    background: #FDF3F2;
+    border: 1px solid #C0392B;
+    color: #C0392B;
+    padding: 14px 18px;
+    font-size: 0.82rem;
+    margin-bottom: 16px;
+    display: none;
+  }
+  .form-rate-warning.visible { display: block; }
+
+
+  /* ── COUNTRY SEARCHABLE DROPDOWN ── */
+  .country-dropdown {
+    position: relative;
+  }
+  .country-input-wrap {
+    position: relative;
+  }
+  .country-search-input {
+    width: 100%;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  .country-input-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: transform 0.2s;
+  }
+  .country-dropdown.open .country-input-icon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .country-list-wrap {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0; right: 0;
+    background: var(--ivory);
+    border: 1px solid var(--gold);
+    border-top: none;
+    z-index: 500;
+    max-height: 260px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(14,30,53,0.12);
+  }
+  .country-dropdown.open .country-list-wrap {
+    display: block;
+  }
+  .country-list-inner {
+    max-height: 260px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  .country-list-inner::-webkit-scrollbar {
+    width: 4px;
+  }
+  .country-list-inner::-webkit-scrollbar-track {
+    background: var(--cream);
+  }
+  .country-list-inner::-webkit-scrollbar-thumb {
+    background: var(--stone-dark);
+    border-radius: 2px;
+  }
+  .country-option {
+    touch-action: manipulation; /* faster tap on iOS */
+    padding: 11px 16px;
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.15s;
+    border-bottom: 1px solid var(--stone);
+  }
+  .country-option:last-child { border-bottom: none; }
+  .country-option:hover,
+  .country-option.highlighted {
+    background: var(--gold-pale);
+    color: var(--navy);
+  }
+  .country-option.selected {
+    background: var(--cream);
+    color: var(--navy);
+    font-weight: 400;
+  }
+  .country-option .country-flag {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .country-option .match-highlight {
+    background: rgba(184,144,42,0.25);
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+  .country-no-results {
+    padding: 16px;
+    font-size: 0.84rem;
+    font-weight: 300;
+    color: var(--light-grey);
+    text-align: center;
+    font-style: italic;
+  }
+  /* Prioritised countries at top separator */
+  .country-group-label {
+    padding: 8px 16px 4px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--light-grey);
+    background: var(--cream);
+    border-bottom: 1px solid var(--stone);
+    position: sticky;
+    top: 0;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(26px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  /* ═══════════════════════════════════════════════════════
+     REVEAL ANIMATION — Progressive Enhancement
+     
+     DEFAULT STATE: All .reveal elements are fully visible.
+     Content is ALWAYS readable with zero JavaScript.
+     
+     ENHANCED STATE: When JS runs successfully on desktop,
+     it adds 'js-animations-ready' to <html>. Only THEN
+     do elements hide themselves for the scroll-in effect.
+     
+     This means:
+     - iPhone Safari bfcache restore → content stays visible ✅
+     - JS disabled → content stays visible ✅
+     - Slow JS → content stays visible until JS ready ✅
+     - Android Chrome → smooth scroll animation ✅
+     - Desktop → smooth scroll animation ✅
+  ═══════════════════════════════════════════════════════ */
+
+  /* DEFAULT: always visible — no JS required */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+
+  /* ENHANCED: only hide when JS has confirmed it's safe to animate */
+  html.js-animations-ready .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  html.js-animations-ready .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Transition delays — stagger siblings slightly */
+  html.js-animations-ready .d1 { transition-delay: 0.08s; }
+  html.js-animations-ready .d2 { transition-delay: 0.16s; }
+  html.js-animations-ready .d3 { transition-delay: 0.24s; }
+
+  /* NEVER animate on mobile — always show content immediately */
+  @media (max-width: 768px) {
+    html.js-animations-ready .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* NEVER animate when user prefers reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html.js-animations-ready .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* ── CONTACT SECTION ── */
+  .contact-section {
+    padding: 130px 68px;
+    background: var(--cream);
+    border-top: 1px solid var(--stone-dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact-left {}
+  .contact-intro {
+    font-size: 0.98rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.9;
+    margin-top: 28px;
+    margin-bottom: 48px;
+  }
+  .contact-info-block {
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .contact-info-item {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .contact-info-icon {
+    width: 38px; height: 38px;
+    background: var(--gold-pale);
+    border: 1px solid rgba(184,144,42,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .contact-info-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+  .contact-info-value {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+
+  /* Form */
+  .contact-form-wrap {
+    background: var(--cream);
+    border: 1px solid var(--stone-dark);
+    padding: 56px 52px;
+    position: relative;
+  }
+  .contact-form-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; right: -10px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--stone-dark);
+    z-index: -1;
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .form-subtitle {
+    font-size: 0.86rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .form-group.full { grid-column: span 2; }
+  .form-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .form-label span {
+    color: var(--gold);
+    margin-left: 2px;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    background: var(--cream);
+    border: 1px solid var(--stone-dark);
+    padding: 13px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--charcoal);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184,144,42,0.08);
+  }
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: var(--light-grey);
+    font-weight: 300;
+  }
+  .form-select-wrap {
+    position: relative;
+  }
+  .form-select-wrap::after {
+    content: '▾';
+    position: absolute;
+    right: 16px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+  .form-select {
+    cursor: pointer;
+    padding-right: 40px;
+  }
+  .form-select option { color: var(--charcoal); }
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+  .form-note {
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: var(--light-grey);
+    margin-top: -8px;
+    margin-bottom: 12px;
+  }
+  .form-submit {
+    width: 100%;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    background: var(--navy);
+    border: 1.5px solid var(--navy);
+    padding: 17px 36px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: transparent; color: var(--navy); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 32px;
+  }
+  .form-success-icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--gold-pale);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 24px;
+  }
+  .form-success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .form-success-msg {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--mid-grey);
+    line-height: 1.75;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     RESPONSIVE DESIGN — Mobile First Approach
+     Breakpoints:
+       • < 480px  = Small phones (iPhone SE, Android compact)
+       • < 768px  = All phones (iPhone, Android standard)
+       • < 1024px = Tablets (iPad, Android tablets, landscape phones)
+       • < 1280px = Small laptops / large tablets landscape
+     Browser support:
+       • Chrome 60+, Firefox 55+, Safari 12+, Edge 79+
+       • iOS Safari 12+, Chrome for Android, Samsung Internet
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── TABLET (≤ 1024px) ── */
+  @media (max-width: 1024px) {
+
+    /* NAV — collapse links, keep logo + CTA */
+    nav { padding: 20px 32px; }
+    nav.scrolled { padding: 14px 32px; }
+    .nav-links { display: none; } /* Hidden — hamburger replaces on mobile */
+
+    /* HERO — stack vertically */
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 140px 40px 60px; }
+    .hero-right { display: none; } /* Compass panel hidden on tablet/mobile */
+
+    /* SECTIONS — reduce padding */
+    .about, .businesses, .presence, .leadership,
+    .esg, .news, .cta-band, .contact-section { padding: 80px 40px; }
+    footer { padding: 60px 40px 32px; }
+
+    /* ABOUT — stack */
+    .about { grid-template-columns: 1fr; gap: 56px; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+
+    /* BUSINESSES — 2 columns on tablet */
+    .biz-grid { grid-template-columns: repeat(2, 1fr); }
+    .biz-card.wide { grid-column: span 2; }
+    .it-products { grid-template-columns: 1fr 1fr; }
+
+    /* PRESENCE — stack */
+    .presence { grid-template-columns: 1fr; gap: 48px; }
+    .presence-right { padding-top: 0; }
+    .presence-card::after { display: none; }
+
+    /* LEADERSHIP — 2 columns */
+    .leaders-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .leadership-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+
+    /* ESG — stack */
+    .esg { grid-template-columns: 1fr; gap: 48px; }
+
+    /* NEWS — stack: 1 big + 2 side by side */
+    .news-grid { grid-template-columns: 1fr 1fr; }
+    .news-grid .news-card:first-child { grid-column: span 2; }
+
+    /* CONTACT — stack */
+    .contact-section { grid-template-columns: 1fr; gap: 48px; }
+    .cta-band { grid-template-columns: 1fr; gap: 48px; }
+
+    /* FOOTER — 2 columns */
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+
+    /* Disable hover gap animations on touch — they don't work and cause jitter */
+    .biz-link:hover { gap: 8px; }
+    .news-link:hover { gap: 8px; }
+    .portfolio-link:hover { gap: 8px; }
+  }
+
+  /* ── MOBILE (≤ 768px) ── */
+  @media (max-width: 768px) {
+
+    /* CRITICAL: Hero elements start at opacity:0 and use CSS animation to fade in.
+       On iOS Safari, animations can be suppressed or behave differently.
+       Force all of them visible on mobile — no animation needed on small screens. */
+    .hero-eyebrow,
+    .hero-title,
+    .hero-desc,
+    .hero-actions,
+    .hero-compass,
+    .hero-right-stats {
+      opacity: 1 !important;
+      animation: none !important;
+    }
+
+    /* CURSOR — disable custom cursor on touch devices */
+    body { cursor: auto; }
+    .cursor, .cursor-ring { display: none; }
+
+    /* NAV */
+    nav { padding: 16px 20px; }
+    nav.scrolled { padding: 12px 20px; }
+    .nav-cta { padding: 9px 18px; font-size: 0.62rem; }
+
+    /* Hamburger menu */
+    /* Show hamburger on mobile — it's display:none globally above */
+    .hamburger { display: flex; }
+    /* Hide desktop nav items on mobile */
+    .nav-links, .nav-cta { display: none !important; }
+
+    /* HERO */
+    .hero-left { padding: 120px 20px 52px; }
+    .hero-title { font-size: clamp(2.4rem, 8vw, 3.8rem); margin-bottom: 24px; }
+    .hero-desc { font-size: 0.95rem; margin-bottom: 36px; }
+    .hero-actions { flex-direction: column; align-items: stretch; gap: 12px; }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-outline { text-align: center; padding: 14px 24px; }
+    .hero-eyebrow { font-size: 0.58rem; letter-spacing: 0.28em; }
+
+    /* MARQUEE — slower on mobile */
+    .marquee-track { animation-duration: 20s; }
+
+    /* SECTIONS */
+    .about, .businesses, .presence, .leadership,
+    .esg, .news, .cta-band, .contact-section { padding: 60px 20px; }
+    footer { padding: 48px 20px 28px; }
+
+    /* SECTION HEADERS */
+    .section-heading { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+    .section-tag { font-size: 0.56rem; letter-spacing: 0.28em; }
+
+    /* ABOUT */
+    .about { gap: 40px; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 1px; }
+    .stat-box { padding: 32px 24px; }
+    .stat-num { font-size: 2.2rem; }
+    .pull-quote p { font-size: 1rem; }
+
+    /* BUSINESSES — single column on mobile */
+    .biz-grid { grid-template-columns: 1fr; }
+    .biz-card.wide { grid-column: span 1; }
+    .biz-card { padding: 36px 24px 28px; }
+    .it-products { grid-template-columns: 1fr; gap: 10px; }
+    .it-product { padding: 16px 18px; }
+
+    /* PRESENCE */
+    .region-item { padding: 18px 0; }
+    .region-name { font-size: 1.1rem; }
+    .region-subs { display: none; } /* too cramped on mobile */
+    .presence-nums { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .pn-num { font-size: 1.6rem; }
+
+    /* LEADERSHIP — 2 column on mobile */
+    .leaders-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .leader-avatar { aspect-ratio: 1/1; } /* Square on mobile — less tall */
+    .leader-name { font-size: 0.95rem; }
+    .leader-title { font-size: 0.55rem; }
+    .leadership { padding: 60px 20px; }
+
+    /* ESG */
+    .esg-commitment-val { font-size: 1.2rem; }
+    .esg-mini-stats { gap: 20px; }
+    .esg-pillar { padding: 24px 20px; }
+
+    /* NEWS — single column */
+    .news-grid { grid-template-columns: 1fr; }
+    .news-grid .news-card:first-child { grid-column: span 1; }
+    .news-card:first-child .news-title { font-size: 1.25rem; }
+
+    /* CONTACT — full width fields */
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .form-group { margin-bottom: 18px; }
+    .contact-form-wrap { padding: 32px 20px; }
+    .contact-form-wrap::after { display: none; } /* shadow box removed mobile */
+    .form-input, .form-select, .form-textarea {
+      font-size: 16px; /* CRITICAL: prevents iOS Safari auto-zoom on focus */
+      padding: 14px 14px;
+    }
+    .country-option {
+    touch-action: manipulation; /* faster tap on iOS */ padding: 14px 14px; min-height: 44px; } /* touch target */
+    .country-list-wrap { max-height: 200px; }
+    .form-submit { padding: 16px; font-size: 0.7rem; }
+
+    /* FOOTER — single column on mobile */
+    .footer-top { grid-template-columns: 1fr; gap: 36px; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .footer-offices { text-align: center; }
+
+    /* BUTTONS */
+    .btn-primary, .btn-outline, .btn-gold, .btn-outline-white {
+      padding: 13px 22px;
+      font-size: 0.65rem;
+    }
+
+    /* CTA BAND */
+    .cta-hq { font-size: 0.55rem; }
+    .cta-band { padding: 60px 20px; }
+
+    /* Remove box shadow decorations that break on mobile */
+    .presence-card::after { display: none; }
+  }
+
+  /* ── SMALL PHONES (≤ 480px) — iPhone SE, compact Androids ── */
+  @media (max-width: 480px) {
+    .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); }
+    .hero-desc { font-size: 0.9rem; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+    .stat-num { font-size: 1.9rem; }
+    .leaders-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .hero-stat-row { gap: 20px; }
+    .hero-stat-num { font-size: 1.6rem; }
+    .nav-logo-name { font-size: 0.9rem; letter-spacing: 0.2em; }
+    .biz-name { font-size: 1.25rem; }
+    .section-heading { font-size: clamp(1.6rem, 7vw, 2.2rem); }
+    .marquee-item span { font-size: 0.55rem; letter-spacing: 0.18em; }
+  }
+
+  /* ── LARGE SCREENS (≥ 1440px) — 4K, wide monitors ── */
+  @media (min-width: 1440px) {
+    nav { padding: 28px 100px; }
+    nav.scrolled { padding: 18px 100px; }
+    .hero-left { padding: 180px 100px 120px; }
+    .about, .businesses, .presence, .leadership,
+    .esg, .news, .cta-band, .contact-section { padding: 160px 100px; }
+    footer { padding: 100px 100px 52px; }
+  }
+
+  /* ── PRINT MEDIA ── */
+  @media print {
+    .cursor, .cursor-ring, .marquee-strip,
+    .hamburger, .mobile-nav-drawer, .mobile-nav-overlay,
+    nav { display: none !important; }
+    body { cursor: auto; color: #000; background: #fff; }
+    .hero { min-height: auto; grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    section { padding: 40px 20px !important; break-inside: avoid; }
+    .biz-grid, .leaders-grid { grid-template-columns: 1fr 1fr; }
+    a { color: #000; text-decoration: underline; }
+    .btn-primary, .btn-outline, .btn-gold { border: 1px solid #000 !important; color: #000 !important; background: transparent !important; }
+  }
+
+  /* ── REDUCED MOTION — accessibility ── */
+  /* CRITICAL: When animation is suppressed, any element that starts at
+     opacity:0 and relies on animation to become visible MUST be explicitly
+     set to opacity:1 here. Otherwise iOS Safari leaves them invisible. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    /* Hero elements use opacity:0 + animation:forwards to appear —
+       force them visible when animation is disabled */
+    .hero-eyebrow,
+    .hero-title,
+    .hero-desc,
+    .hero-actions,
+    .hero-compass,
+    .hero-right-stats {
+      opacity: 1 !important;
+      animation: none !important;
+    }
+    /* Stop the marquee from scrolling */
+    .marquee-track { animation: none !important; }
+    /* Reveal elements already handled by .reveal CSS above */
+  }
+
+  /* ── HIGH CONTRAST — accessibility ── */
+  @media (prefers-color-scheme: dark) and (forced-colors: active) {
+    :root { --navy: ButtonText; --gold: Highlight; --ivory: Canvas; }
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     MOBILE NAV — COLLAPSED BY DEFAULT, NO INLINE STYLES
+     Rule: CSS owns visibility. JS only toggles .open class.
+     Drawer uses transform (not display) so transitions work.
+  ═══════════════════════════════════════════════════════ */
+
+  /* HAMBURGER BUTTON — hidden on desktop, shown on mobile via @media */
+  .hamburger {
+    display: none; /* overridden to flex inside @media ≤768px */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px 4px;
+    background: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 201;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    transform-origin: center;
+  }
+  /* Animate to X when open */
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* OVERLAY — covers page behind drawer. Always in DOM, invisible by default */
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 30, 53, 0.5);
+    z-index: 399;
+    opacity: 0;
+    visibility: hidden; /* takes element out of tab order + interaction when closed */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+  }
+
+  /* DRAWER — slides in from right. Always in DOM, off-screen by default */
+  .mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(300px, 82vw);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background: var(--ivory);
+    border-left: 2px solid var(--stone-dark);
+    z-index: 400; /* above overlay */
+    padding: 76px 28px 40px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Hidden: pushed off screen to the right */
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 0.35s;
+    box-shadow: -4px 0 24px rgba(14,30,53,0.12);
+  }
+  .mobile-nav-drawer.open {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0s linear 0s;
+  }
+
+  /* DRAWER CONTENTS */
+  .mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-nav-links li a {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--stone);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-nav-links li a:hover,
+  .mobile-nav-links li a:active { color: var(--gold); padding-left: 10px; }
+  .mobile-nav-cta {
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    background: var(--navy);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 28px;
+    transition: background 0.25s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-nav-cta:hover,
+  .mobile-nav-cta:active { background: var(--gold); }
+  /* Close button inside drawer */
+  .drawer-close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--mid-grey);
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.2s;
+  }
+  .drawer-close-btn:hover { color: var(--navy); }
+
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-name">ASVEL Group</div>
+    <div class="nav-logo-sub">Dubai, UAE</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#businesses">Our Businesses</a></li>
+    <li><a href="#presence">Global Reach</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#esg">Sustainability</a></li>
+    <li><a href="#news">Newsroom</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" id="navCta">Get In Touch</a>
+  <!-- Hamburger — visible on mobile only -->
+  <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay (darkens background) -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+<!-- Mobile nav drawer — collapsed by default, slides in when .open added -->
+<nav class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+  <ul class="mobile-nav-links">
+    <li><a href="#about"      onclick="closeMobileNav()">About</a></li>
+    <li><a href="#businesses" onclick="closeMobileNav()">Our Businesses</a></li>
+    <li><a href="#presence"   onclick="closeMobileNav()">Global Reach</a></li>
+    <li><a href="#esg"        onclick="closeMobileNav()">Sustainability</a></li>
+    <li><a href="#news"       onclick="closeMobileNav()">Newsroom</a></li>
+    <li><a href="#contact"    onclick="closeMobileNav()">Contact</a></li>
+  </ul>
+  <a href="#contact" class="mobile-nav-cta" onclick="closeMobileNav()">Get In Touch →</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">United Arab Emirates · Diversified Global Group</div>
+    <h1 class="hero-title">
+      Where Vision<br>
+      Meets <em>Legacy.</em>
+    </h1>
+    <p class="hero-desc">
+      From trading floors in Dubai to technology platforms across Asia, from gold markets to gourmet supermarkets — ASVEL Group builds businesses that stand the test of time.
+    </p>
+    <div class="hero-actions">
+      <a href="#businesses" class="btn-primary">Our Businesses</a>
+      <a href="#about" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-compass">
+      <div class="compass-ring-1"></div>
+      <div class="compass-ring-2"></div>
+      <div class="compass-ring-3"></div>
+      <svg class="compass-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="250" cy="250" r="240" stroke="#B8902A" stroke-width="0.6" stroke-dasharray="4 12"/>
+        <circle cx="250" cy="250" r="180" stroke="#0E1E35" stroke-width="0.4" opacity="0.2"/>
+        <line x1="250" y1="10" x2="250" y2="490" stroke="#B8902A" stroke-width="0.4" opacity="0.28"/>
+        <line x1="10" y1="250" x2="490" y2="250" stroke="#B8902A" stroke-width="0.4" opacity="0.28"/>
+        <line x1="75" y1="75" x2="425" y2="425" stroke="#B8902A" stroke-width="0.3" opacity="0.18"/>
+        <line x1="425" y1="75" x2="75" y2="425" stroke="#B8902A" stroke-width="0.3" opacity="0.18"/>
+        <polygon points="250,38 272,204 438,78 282,232 462,250 282,268 438,422 272,296 250,462 228,296 62,422 218,268 38,250 218,232 62,78 228,204"
+          stroke="#B8902A" stroke-width="0.9" fill="none" opacity="0.45"/>
+        <circle cx="250" cy="250" r="5" fill="#B8902A" opacity="0.55"/>
+        <circle cx="250" cy="12" r="3" fill="#B8902A" opacity="0.45"/>
+        <circle cx="250" cy="488" r="3" fill="#B8902A" opacity="0.45"/>
+        <circle cx="12" cy="250" r="3" fill="#B8902A" opacity="0.45"/>
+        <circle cx="488" cy="250" r="3" fill="#B8902A" opacity="0.45"/>
+      </svg>
+    </div>
+    <div class="hero-right-stats">
+      <div class="hero-stat-row">
+        <div>
+          <div class="hero-stat-num">10<sup>+</sup></div>
+          <div class="hero-stat-label">Business Sectors</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">40<sup>+</sup></div>
+          <div class="hero-stat-label">Countries Served</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">20<sup>+</sup></div>
+          <div class="hero-stat-label">Years of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-strip" id="marqueeStrip">
+  <div class="marquee-track" id="marqueeTrack">
+    <a href="#biz-realestate" class="marquee-item" aria-label="Go to Real Estate section"><span>Real Estate</span><div class="marquee-dot"></div></a>
+    <a href="#biz-gold" class="marquee-item" aria-label="Go to Gold Trading section"><span>Gold Trading</span><div class="marquee-dot"></div></a>
+    <a href="#biz-events" class="marquee-item" aria-label="Go to Event Management section"><span>Event Management</span><div class="marquee-dot"></div></a>
+    <a href="#biz-tech" class="marquee-item" aria-label="Go to IT Solutions section"><span>IT Solutions</span><div class="marquee-dot"></div></a>
+    <a href="#biz-sports" class="marquee-item" aria-label="Go to Sports Management section"><span>Sports Management</span><div class="marquee-dot"></div></a>
+    <a href="#biz-bizsetup" class="marquee-item" aria-label="Go to Business Setup section"><span>Business Setup</span><div class="marquee-dot"></div></a>
+    <a href="#biz-food" class="marquee-item" aria-label="Go to Food Distribution section"><span>Food Distribution</span><div class="marquee-dot"></div></a>
+    <a href="#biz-market" class="marquee-item" aria-label="Go to Supermarket Chain section"><span>Supermarket Chain</span><div class="marquee-dot"></div></a>
+    <a href="#biz-lounge" class="marquee-item" aria-label="Go to Shisha Lounge section"><span>Shisha Lounge</span><div class="marquee-dot"></div></a>
+    <a href="#biz-trading" class="marquee-item" aria-label="Go to Wholesale Trading section"><span>Wholesale Trading</span><div class="marquee-dot"></div></a>
+    <a href="#biz-realestate" class="marquee-item" aria-label="Go to Real Estate section"><span>Real Estate</span><div class="marquee-dot"></div></a>
+    <a href="#biz-gold" class="marquee-item" aria-label="Go to Gold Trading section"><span>Gold Trading</span><div class="marquee-dot"></div></a>
+    <a href="#biz-events" class="marquee-item" aria-label="Go to Event Management section"><span>Event Management</span><div class="marquee-dot"></div></a>
+    <a href="#biz-tech" class="marquee-item" aria-label="Go to IT Solutions section"><span>IT Solutions</span><div class="marquee-dot"></div></a>
+    <a href="#biz-sports" class="marquee-item" aria-label="Go to Sports Management section"><span>Sports Management</span><div class="marquee-dot"></div></a>
+    <a href="#biz-bizsetup" class="marquee-item" aria-label="Go to Business Setup section"><span>Business Setup</span><div class="marquee-dot"></div></a>
+    <a href="#biz-food" class="marquee-item" aria-label="Go to Food Distribution section"><span>Food Distribution</span><div class="marquee-dot"></div></a>
+    <a href="#biz-market" class="marquee-item" aria-label="Go to Supermarket Chain section"><span>Supermarket Chain</span><div class="marquee-dot"></div></a>
+    <a href="#biz-lounge" class="marquee-item" aria-label="Go to Shisha Lounge section"><span>Shisha Lounge</span><div class="marquee-dot"></div></a>
+    <a href="#biz-trading" class="marquee-item" aria-label="Go to Wholesale Trading section"><span>Wholesale Trading</span><div class="marquee-dot"></div></a>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <div>
+    <div class="section-tag reveal">Our Identity</div>
+    <h2 class="section-heading reveal">Built in Dubai.<br><em>Operating the World.</em></h2>
+    <div class="about-body reveal">
+      <p>ASVEL Group is a Dubai-based diversified conglomerate built on the belief that a truly diversified business — rooted in integrity and guided by ambition — can create lasting impact across every sector it enters.</p>
+      <p>From gold trading and real estate to IT solutions, event management, sports, and a portfolio of investment opportunities spanning food distribution, retail, hospitality, and wholesale trading — we have built a group that reflects the breadth and dynamism of modern commerce.</p>
+      <p>We are operators, investors, advisors, and innovators. Ten distinct sectors. One unified vision.</p>
+    </div>
+    <div class="pull-quote reveal">
+      <p>We do not follow markets. We build the ecosystems that markets depend on.</p>
+    </div>
+  </div>
+  <div class="about-stats reveal">
+    <div class="stat-box">
+      <div class="stat-num">10<sup>+</sup></div>
+      <div class="stat-lbl">Business<br>Sectors</div>
+    </div>
+    <div class="stat-box navy">
+      <div class="stat-num">40<sup>+</sup></div>
+      <div class="stat-lbl">Countries<br>Served</div>
+    </div>
+    <div class="stat-box teal">
+      <div class="stat-num">20<sup>+</sup></div>
+      <div class="stat-lbl">Years of<br>Excellence</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">4</div>
+      <div class="stat-lbl">Named<br>Subsidiaries</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUSINESSES ── -->
+<section class="businesses" id="businesses">
+  <div class="businesses-header">
+    <div>
+      <div class="section-tag reveal">Our Businesses</div>
+      <h2 class="section-heading reveal">Ten Sectors.<br><em>One Group.</em></h2>
+    </div>
+    <a href="#contact" class="btn-outline reveal">Partner With Us</a>
+  </div>
+
+  <div class="biz-grid">
+
+    <!-- 1. STRATOVA HOMES — Real Estate -->
+    <div class="biz-card wide reveal" id="biz-realestate">
+      <div class="biz-card-top">
+        <div class="biz-num">01</div>
+        <div class="biz-icon">🏡</div>
+      </div>
+      <div class="biz-sector">Real Estate</div>
+      <h3 class="biz-name">Stratova Homes</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">A premium real estate development and property investment company operating across Dubai and the wider UAE. Stratova Homes delivers thoughtfully designed residential and commercial spaces — from off-plan developments and ready properties to property management and investment advisory. Built on a deep understanding of the UAE market, Stratova Homes creates spaces where ambition finds its address.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Property Development</span>
+        <span class="biz-tag">Investment</span>
+        <span class="biz-tag">Dubai Real Estate</span>
+        <span class="biz-tag">Property Management</span>
+      </div>
+    </div>
+
+    <!-- 2. IDEAL GOLD — Gold Trading -->
+    <div class="biz-card reveal" id="biz-gold">
+      <div class="biz-card-top">
+        <div class="biz-num">02</div>
+        <div class="biz-icon">🪙</div>
+      </div>
+      <div class="biz-sector">Precious Metals</div>
+      <h3 class="biz-name">Ideal Gold</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">Specialised in gold trading, bullion import and export, and precious metals commerce across the GCC and international markets. Ideal Gold connects suppliers, refineries, and institutional buyers through a network built on decades of market expertise, rigorous compliance, and unwavering trust.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Gold Trading</span>
+        <span class="biz-tag">Bullion</span>
+        <span class="biz-tag">Import & Export</span>
+      </div>
+    </div>
+
+    <!-- 3. ARK MIDDLE EAST — Event Management -->
+    <div class="biz-card reveal d1" id="biz-events">
+      <div class="biz-card-top">
+        <div class="biz-num">03</div>
+        <div class="biz-icon">🎪</div>
+      </div>
+      <div class="biz-sector">Events & Entertainment</div>
+      <h3 class="biz-name">Ark Middle East</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">A full-service event management and production company operating across the Middle East. From high-profile corporate conferences and brand activations to large-scale entertainment productions and government ceremonies, Ark Middle East delivers world-class experiences that leave lasting impressions on every audience.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Event Production</span>
+        <span class="biz-tag">Brand Activation</span>
+        <span class="biz-tag">Corporate Events</span>
+      </div>
+    </div>
+
+    <!-- 4. TECHRISE — IT Solutions (wide) -->
+    <div class="biz-card wide reveal" id="biz-tech">
+      <div class="biz-card-top">
+        <div class="biz-num">04</div>
+        <div class="biz-icon">💻</div>
+      </div>
+      <div class="biz-sector">Technology</div>
+      <h3 class="biz-name">TechRise</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">A technology solutions and services company delivering IT infrastructure, software development, digital transformation consulting, and managed services to businesses across the UAE and the wider region. TechRise empowers organisations of all sizes to harness the full potential of technology — modernising operations, securing digital assets, and building the platforms that drive tomorrow's growth.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">IT Infrastructure</span>
+        <span class="biz-tag">Software Development</span>
+        <span class="biz-tag">Digital Transformation</span>
+        <span class="biz-tag">Managed Services</span>
+        <span class="biz-tag">Cybersecurity</span>
+      </div>
+    </div>
+
+    <!-- 5. SPORTS MANAGEMENT -->
+    <div class="biz-card reveal" id="biz-sports">
+      <div class="biz-card-top">
+        <div class="biz-num">05</div>
+        <div class="biz-icon">🏆</div>
+      </div>
+      <div class="biz-sector">Sports & Entertainment</div>
+      <h3 class="biz-name">Sports Management & Organisation</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">A dedicated sports management and sports organisation vertical covering athlete representation, sports event production, and franchise operations across the UAE and the region. From professional tournament management to athlete development programmes, the group brings sporting ambition to life at every scale.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Athlete Management</span>
+        <span class="biz-tag">Event Production</span>
+        <span class="biz-tag">Franchise Ops</span>
+      </div>
+    </div>
+
+    <!-- 6. BUSINESS SETUP -->
+    <div class="biz-card reveal d1" id="biz-bizsetup">
+      <div class="biz-card-top">
+        <div class="biz-num">06</div>
+        <div class="biz-icon">🏢</div>
+      </div>
+      <div class="biz-sector">Advisory & Consulting</div>
+      <h3 class="biz-name">Business Setup & Company Establishment</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">End-to-end business setup and company establishment services in the UAE — from free zone and mainland incorporation to trade licensing, visa processing, and full regulatory compliance. The group guides entrepreneurs and enterprises through every step of building a legal and operational presence in the Emirates.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">UAE Licensing</span>
+        <span class="biz-tag">Free Zone Setup</span>
+        <span class="biz-tag">PRO Services</span>
+      </div>
+    </div>
+
+    <!-- 7. FOOD DISTRIBUTION (Investment Opportunity) -->
+    <div class="biz-card reveal d2" id="biz-food">
+      <div class="biz-card-top">
+        <div class="biz-num">07</div>
+        <div class="biz-icon">🚛</div>
+      </div>
+      <div class="biz-sector">Food & FMCG · Investment Opportunity</div>
+      <h3 class="biz-name">Food Distribution</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">An active investment opportunity in FMCG food distribution across the GCC. A structured supply chain connecting global food manufacturers with regional retailers, supermarkets, and hospitality providers — built on cold-chain logistics, strict quality compliance, and deep distributor relationships across the region.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">FMCG</span>
+        <span class="biz-tag">Cold Chain</span>
+        <span class="biz-tag">Investment</span>
+      </div>
+    </div>
+
+    <!-- 8. SUPERMARKET CHAIN (Investment Opportunity, wide) -->
+    <div class="biz-card wide reveal" id="biz-market">
+      <div class="biz-card-top">
+        <div class="biz-num">08</div>
+        <div class="biz-icon">🛒</div>
+      </div>
+      <div class="biz-sector">Retail · Investment Opportunity</div>
+      <h3 class="biz-name">Supermarket Chain</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">An investment opportunity in a community-focused supermarket chain concept targeting the UAE retail market. Positioned at the intersection of quality and accessibility, the proposition offers a curated selection of fresh produce, international groceries, and everyday essentials — serving the UAE's diverse, multicultural communities with a retail model built for scale, loyalty, and long-term community value.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Retail Chain</span>
+        <span class="biz-tag">Fresh Produce</span>
+        <span class="biz-tag">Community Retail</span>
+        <span class="biz-tag">Investment</span>
+      </div>
+    </div>
+
+    <!-- 9. SHISHA LOUNGE (Investment Opportunity) -->
+    <div class="biz-card reveal" id="biz-lounge">
+      <div class="biz-card-top">
+        <div class="biz-num">09</div>
+        <div class="biz-icon">💨</div>
+      </div>
+      <div class="biz-sector">Hospitality · Investment Opportunity</div>
+      <h3 class="biz-name">Shisha Lounge</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">A premium shisha lounge hospitality concept blending authentic Middle Eastern culture with contemporary interior design. Each venue offers a curated selection of premium flavours, bespoke service, and an atmosphere designed for conversation, leisure, and connection — a growing investment opportunity in UAE's vibrant hospitality landscape.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">F&B</span>
+        <span class="biz-tag">Hospitality</span>
+        <span class="biz-tag">Investment</span>
+      </div>
+    </div>
+
+    <!-- 10. WHOLESALE TRADING (Investment Opportunity) -->
+    <div class="biz-card reveal d1" id="biz-trading">
+      <div class="biz-card-top">
+        <div class="biz-num">10</div>
+        <div class="biz-icon">🏭</div>
+      </div>
+      <div class="biz-sector">Trading · Investment Opportunity</div>
+      <h3 class="biz-name">Wholesale Trading</h3>
+      <div class="biz-divider"></div>
+      <p class="biz-desc">Bulk commodities and consumer goods wholesale trading serving retailers, resellers, and institutional buyers across the GCC and beyond. An investment opportunity anchored in competitive margins, deep supplier inventory, and a distribution network built for scale — capitalising on the UAE's position as a global trading hub.</p>
+      <div class="biz-tags">
+        <span class="biz-tag">Wholesale</span>
+        <span class="biz-tag">Commodities</span>
+        <span class="biz-tag">B2B Trading</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── GLOBAL PRESENCE ── -->
+<section class="presence" id="presence">
+  <div>
+    <div class="section-tag reveal">Global Footprint</div>
+    <h2 class="section-heading reveal">From the <em>Rising Sun</em><br>to the Plains of <em>Patagonia.</em></h2>
+    <p class="reveal" style="font-size:0.98rem; font-weight:300; color:var(--mid-grey); line-height:1.9; margin-top:26px; max-width:520px;">Headquartered in the UAE, our businesses serve clients, partners, and consumers across every major geography — wherever opportunity meets ambition.</p>
+    <div class="region-list">
+      <div class="region-item reveal">
+        <div class="region-num">01</div>
+        <div class="region-name">Middle East & GCC</div>
+        <div class="region-dot"></div>
+        <div class="region-subs">Headquarters · Core Markets</div>
+      </div>
+      <div class="region-item reveal d1">
+        <div class="region-num">02</div>
+        <div class="region-name">Asia Pacific</div>
+        <div class="region-dot"></div>
+        <div class="region-subs">Japan · Singapore · India · China</div>
+      </div>
+      <div class="region-item reveal d2">
+        <div class="region-num">03</div>
+        <div class="region-name">Africa</div>
+        <div class="region-dot"></div>
+        <div class="region-subs">Kenya · Nigeria · South Africa · Egypt</div>
+      </div>
+      <div class="region-item reveal">
+        <div class="region-num">04</div>
+        <div class="region-name">Europe</div>
+        <div class="region-dot"></div>
+        <div class="region-subs">UK · Switzerland · Germany</div>
+      </div>
+      <div class="region-item reveal d1">
+        <div class="region-num">05</div>
+        <div class="region-name">The Americas</div>
+        <div class="region-dot"></div>
+        <div class="region-subs">USA · Brazil · Argentina · Chile</div>
+      </div>
+    </div>
+  </div>
+  <div class="presence-right reveal">
+    <div class="presence-card">
+      <p class="presence-card-quote">
+        "Our scale is not measured by the map we cover, but by the <em>lives we touch</em> in every corner of it."
+      </p>
+    </div>
+    <div class="presence-nums">
+      <div>
+        <div class="pn-num">40+</div>
+        <div class="pn-label">Countries</div>
+      </div>
+      <div>
+        <div class="pn-num">5</div>
+        <div class="pn-label">Continents</div>
+      </div>
+      <div>
+        <div class="pn-num">9</div>
+        <div class="pn-label">Business Lines</div>
+      </div>
+      <div>
+        <div class="pn-num">12</div>
+        <div class="pn-label">Regional Offices</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEADERSHIP ── -->
+<section class="leadership" id="leadership" style="display:none;">
+  <div class="leadership-header">
+    <div>
+      <div class="section-tag reveal">Leadership</div>
+      <h2 class="section-heading reveal">Guided by <em>Vision.</em><br>Driven by Purpose.</h2>
+    </div>
+    <a href="#" class="btn-outline-white reveal">Full Leadership Team</a>
+  </div>
+  <div class="leaders-grid">
+    <div class="leader-card reveal">
+      <div class="leader-avatar"><div class="leader-initials">R.S</div></div>
+      <div class="leader-name">Richard Sterling</div>
+      <div class="leader-title">Chairman & Founder</div>
+    </div>
+    <div class="leader-card reveal d1">
+      <div class="leader-avatar"><div class="leader-initials">M.O</div></div>
+      <div class="leader-name">Marcus O'Brien</div>
+      <div class="leader-title">Group Chief Executive Officer</div>
+    </div>
+    <div class="leader-card reveal d2">
+      <div class="leader-avatar"><div class="leader-initials">N.P</div></div>
+      <div class="leader-name">Nadia Patel</div>
+      <div class="leader-title">Group Chief Financial Officer</div>
+    </div>
+    <div class="leader-card reveal d3">
+      <div class="leader-avatar"><div class="leader-initials">J.T</div></div>
+      <div class="leader-name">James Thornton</div>
+      <div class="leader-title">Chief Strategy Officer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ESG ── -->
+<section class="esg" id="esg">
+  <div>
+    <div class="section-tag reveal">Responsibility & Sustainability</div>
+    <h2 class="section-heading reveal">We Build.<br>We <em>Protect.</em><br>We Give Back.</h2>
+    <p class="esg-body reveal">Scale demands responsibility. Our ESG commitments are not a compliance exercise — they are the ethical backbone of every business decision we make. We measure success as much in lives improved as in returns delivered.</p>
+    <div class="esg-commitment reveal">
+      <div class="esg-c-label">Our Climate Commitment</div>
+      <div class="esg-c-val">Net-Zero Operations by 2040</div>
+    </div>
+    <div class="esg-mini-stats reveal">
+      <div>
+        <div class="esg-mini-num">500K<span style="font-size:1rem; color:var(--gold)">+</span></div>
+        <div class="esg-mini-label">Lives Impacted</div>
+      </div>
+      <div>
+        <div class="esg-mini-num">2040</div>
+        <div class="esg-mini-label">Net-Zero Target</div>
+      </div>
+    </div>
+  </div>
+  <div class="esg-pillars reveal">
+    <div class="esg-pillar">
+      <div class="esg-pillar-header">
+        <div class="esg-pillar-icon">🌿</div>
+        <div class="esg-pillar-title">Environment</div>
+      </div>
+      <p class="esg-pillar-body">Reducing carbon footprint across supply chains, transitioning logistics fleets to clean energy, and implementing zero-waste targets in our retail and food businesses.</p>
+    </div>
+    <div class="esg-pillar">
+      <div class="esg-pillar-header">
+        <div class="esg-pillar-icon">🤝</div>
+        <div class="esg-pillar-title">Social Impact</div>
+      </div>
+      <p class="esg-pillar-body">Creating local employment, supporting community nutrition through our food businesses, and expanding access to digital skills and workforce readiness through our technology and training initiatives.</p>
+    </div>
+    <div class="esg-pillar">
+      <div class="esg-pillar-header">
+        <div class="esg-pillar-icon">🏛</div>
+        <div class="esg-pillar-title">Governance</div>
+      </div>
+      <p class="esg-pillar-body">Independent board oversight, full regulatory compliance across all jurisdictions, transparent financial reporting, and a zero-tolerance policy on corruption and unethical practice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWS ── -->
+<section class="news" id="news" style="display:none;">
+  <div class="news-header">
+    <div>
+      <div class="section-tag reveal">Latest News</div>
+      <h2 class="section-heading reveal">From the <em>Newsroom.</em></h2>
+    </div>
+    <a href="#" class="btn-outline reveal">All News & Insights</a>
+  </div>
+  <div class="news-grid">
+    <div class="news-card reveal">
+      <div class="news-date">February 15, 2026</div>
+      <div class="news-badge">Group Announcement</div>
+      <h3 class="news-title">ASVEL Group Launches our FinTech payment platform FinTech Platform, Targeting $2B GMV in First Year Across GCC and South Asia</h3>
+      <p class="news-excerpt">The new multi-currency payment platform will serve SMEs and enterprises across the UAE, Saudi Arabia, India, and Pakistan with embedded compliance and real-time settlement.</p>
+      <a href="#" class="news-link">Read Full Story →</a>
+    </div>
+    <div class="news-card reveal d1">
+      <div class="news-date">January 28, 2026</div>
+      <div class="news-badge">Retail Expansion</div>
+      <h3 class="news-title">Supermarket Chain Opens 12th Supermarket Location in Abu Dhabi's Khalifa City</h3>
+      <p class="news-excerpt">The new flagship store brings our community retail concept to Abu Dhabi, featuring an expanded fresh produce section and 4,000+ international SKUs.</p>
+      <a href="#" class="news-link">Read Full Story →</a>
+    </div>
+    <div class="news-card reveal d2">
+      <div class="news-date">January 10, 2026</div>
+      <div class="news-badge">Sports</div>
+      <h3 class="news-title">Sports Management Secures Title Sponsorship Rights for UAE Pro League Season 2026–27</h3>
+      <p class="news-excerpt">The landmark deal cements Sports Management as the UAE's leading sports management and event company, bringing unprecedented visibility to the league.</p>
+      <a href="#" class="news-link">Read Full Story →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+
+  <!-- Left: header + info -->
+  <div class="contact-left">
+    <div class="section-tag reveal">Connect With Us</div>
+    <h2 class="section-heading reveal">Let's Start a<br><em>Conversation.</em></h2>
+    <p class="contact-intro reveal">
+      Whether you are an investor, a prospective partner, an entrepreneur looking to set up in the UAE, or simply want to learn more about ASVEL Group — we would love to hear from you.
+    </p>
+    <div class="contact-info-block">
+      <div class="contact-info-item reveal">
+        <div class="contact-info-icon">📍</div>
+        <div>
+          <div class="contact-info-label">Headquarters</div>
+          <div class="contact-info-value">ASVEL Group<br>Dubai, UAE</div>
+        </div>
+      </div>
+
+      <div class="contact-info-item reveal d2">
+        <div class="contact-info-icon">📞</div>
+        <div>
+          <div class="contact-info-label">Call Us</div>
+          <div class="contact-info-value">+971 4 XXX XXXX<br>Mon – Fri, 9:00 AM – 6:00 PM GST</div>
+        </div>
+      </div>
+      <div class="contact-info-item reveal d3">
+        <div class="contact-info-icon">🌐</div>
+        <div>
+          <div class="contact-info-label">Regional Offices</div>
+          <div class="contact-info-value">Dubai · Abu Dhabi · London<br>Singapore · Nairobi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: form -->
+  <div class="contact-form-wrap reveal">
+    <div id="formContent">
+      <div class="form-title">Send Us an Enquiry</div>
+      <p class="form-subtitle">Fill in the details below and our team will get back to you within 1–2 business days.</p>
+
+      <!-- ⚠️ Rate limit warning banner (shown if submitting too fast) -->
+      <div class="form-rate-warning" id="rateWarning">
+        Too many attempts. Please wait 60 seconds before trying again.
+      </div>
+
+      <!-- 🍯 HONEYPOT — invisible to real users, bots fill this in and get blocked -->
+      <div class="hp-field" aria-hidden="true">
+        <label for="hp-website">Leave this empty</label>
+        <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="f-name">Full Name <span>*</span></label>
+          <input 
+            type="text" 
+            class="form-input" 
+            id="f-name" 
+            name="name"
+            placeholder="Your full name"
+            maxlength="100"
+            autocomplete="name"
+            spellcheck="false"
+            required>
+          <div class="form-error-msg" id="err-name">⚠ Please enter your full name (letters only, max 100 characters)</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-company">Company / Organisation</label>
+          <input 
+            type="text" 
+            class="form-input" 
+            id="f-company" 
+            name="company"
+            placeholder="Company name (if applicable)"
+            maxlength="150"
+            autocomplete="organization"
+            spellcheck="false">
+        </div>
+      </div>
+
+      <div class="form-row">
+
+        <div class="form-group">
+          <label class="form-label" for="f-phone">Phone Number <span>*</span></label>
+          <input 
+            type="tel" 
+            class="form-input" 
+            id="f-phone" 
+            name="phone"
+            placeholder="+971 50 123 4567"
+            maxlength="20"
+            autocomplete="tel"
+            inputmode="tel"
+            required>
+          <div class="form-error-msg" id="err-phone">⚠ Please enter a valid phone number with country code (e.g. +971501234567)</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="f-country-search">Country <span>*</span></label>
+          <input type="hidden" id="f-country" name="country">
+          <div class="country-dropdown" id="countryDropdown">
+            <div class="country-input-wrap">
+              <input
+                type="text"
+                class="form-input country-search-input"
+                id="f-country-search"
+                placeholder="Search for your country…"
+                autocomplete="off"
+                spellcheck="false"
+                maxlength="100"
+                aria-label="Search country"
+                aria-expanded="false"
+                aria-autocomplete="list"
+                role="combobox">
+              <span class="country-input-icon" id="countryIcon">▾</span>
+            </div>
+            <div class="country-list-wrap" id="countryListWrap" role="listbox" aria-label="Country options">
+              <div class="country-list-inner" id="countryList"></div>
+            </div>
+          </div>
+          <div class="form-error-msg" id="err-country">⚠ Please select a valid country from the list</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-business">Business Enquiry <span>*</span></label>
+          <div class="form-select-wrap">
+            <select class="form-select" id="f-business" name="enquiry_type" required>
+              <option value="" disabled selected>Select a business area</option>
+              <optgroup label="Our Subsidiaries">
+                <option value="Stratova Homes — Real Estate">Stratova Homes — Real Estate</option>
+                <option value="Ideal Gold — Gold Trading">Ideal Gold — Gold Trading</option>
+                <option value="Ark Middle East — Event Management">Ark Middle East — Event Management</option>
+                <option value="TechRise — IT Solutions & Services">TechRise — IT Solutions & Services</option>
+                <option value="Sports Management & Organisation">Sports Management & Organisation</option>
+                <option value="Business Setup & Company Establishment">Business Setup & Company Establishment</option>
+              </optgroup>
+              <optgroup label="Investment Opportunities">
+                <option value="Food Distribution">Food Distribution</option>
+                <option value="Supermarket Chain">Supermarket Chain</option>
+                <option value="Shisha Lounge">Shisha Lounge</option>
+                <option value="Wholesale Trading">Wholesale Trading</option>
+              </optgroup>
+              <optgroup label="Other Enquiries">
+                <option value="Strategic Partnership">Strategic Partnership</option>
+                <option value="Investment Enquiry">Investment Enquiry</option>
+                <option value="Media & Press">Media & Press</option>
+                <option value="Careers & Recruitment">Careers & Recruitment</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-error-msg" id="err-business">⚠ Please select a business area</div>
+        </div>
+      </div>
+
+      <div class="form-group full" style="margin-bottom:6px;">
+        <label class="form-label" for="f-message">Your Message <span>*</span></label>
+        <textarea 
+          class="form-textarea" 
+          id="f-message" 
+          name="message"
+          placeholder="Tell us about your enquiry, project, or how we can help you…"
+          maxlength="2000"
+          required></textarea>
+        <div style="font-family:'Syne',sans-serif; font-size:0.55rem; letter-spacing:0.1em; color:var(--light-grey); text-align:right; margin-top:4px;">
+          <span id="charCount">0</span>/2000 characters
+        </div>
+        <div class="form-error-msg" id="err-message">⚠ Please enter a message (minimum 20 characters, maximum 2000)</div>
+      </div>
+
+      <p class="form-note">* Required fields. We respect your privacy and will never share your data with third parties.</p>
+
+      <button type="button" class="form-submit" id="submitBtn" onclick="submitForm()">
+        Send Enquiry →
+      </button>
+    </div>
+
+    <!-- Success State -->
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">✓</div>
+      <div class="form-success-title">Enquiry Received</div>
+      <p class="form-success-msg">Thank you for reaching out to us. A member of the ASVEL Group team will review your message and respond within 1–2 business days.<br><br>We look forward to the conversation.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── FOOTER (LIGHT) ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">ASVEL Group</div>
+      <div class="footer-brand-sub">Dubai, United Arab Emirates · asvelgroup.com</div>
+      <p class="footer-tagline">Ten businesses. One vision. Building legacies from the heart of Dubai to every corner of the world.</p>
+
+    </div>
+    <div>
+      <div class="footer-col-title">Our Businesses</div>
+      <ul class="footer-links">
+        <li><a href="#biz-realestate">Stratova Homes</a></li>
+        <li><a href="#biz-gold">Ideal Gold</a></li>
+        <li><a href="#biz-events">Ark Middle East</a></li>
+        <li><a href="#biz-tech">TechRise</a></li>
+        <li><a href="#biz-sports">Sports Management</a></li>
+        <li><a href="#biz-bizsetup">Business Setup</a></li>
+        <li><a href="#biz-food">Food Distribution</a></li>
+        <li><a href="#biz-market">Supermarket Chain</a></li>
+        <li><a href="#biz-lounge">Shisha Lounge</a></li>
+        <li><a href="#biz-trading">Wholesale Trading</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#about">About the Group</a></li>
+        <li><a href="#esg">Sustainability & ESG</a></li>
+        <li><a href="#presence">Global Presence</a></li>
+        <li><a href="#contact">Careers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Investment Opportunities</div>
+      <ul class="footer-links">
+        <li><a href="#biz-food">Food Distribution</a></li>
+        <li><a href="#biz-market">Supermarket Chain</a></li>
+        <li><a href="#biz-lounge">Shisha Lounge</a></li>
+        <li><a href="#biz-trading">Wholesale Trading</a></li>
+        <li><a href="#contact">Enquire Now</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 ASVEL Group. All rights reserved. Dubai, United Arab Emirates.</div>
+    <div class="footer-offices">Headquartered in Dubai, UAE</div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ═══════════════════════════════════════════════════════════════
+  // ASVEL GROUP WEBSITE — SECURITY & VALIDATION LAYER
+  // ═══════════════════════════════════════════════════════════════
+
+  // ── Cursor ──
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function animate() {
+    cursor.style.transform = `translate(${mx-4}px, ${my-4}px)`;
+    rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
+    ring.style.transform = `translate(${rx-16}px, ${ry-16}px)`;
+    requestAnimationFrame(animate);
+  })();
+
+
+  // ═══════════════════════════════════════════════════════════════
+  // RESPONSIVE / MOBILE BEHAVIOUR
+  // ═══════════════════════════════════════════════════════════════
+
+  // Detect touch device — disable custom cursor on touch
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  if (isTouchDevice) {
+    const cur = document.getElementById('cursor');
+    const rng = document.getElementById('cursorRing');
+    if (cur) cur.style.display = 'none';
+    if (rng) rng.style.display = 'none';
+    document.body.style.cursor = 'auto';
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // MOBILE NAV — Clean, CSS-only visibility, JS toggles .open only
+  // Drawer starts: transform:translateX(100%), visibility:hidden
+  // Open state:    transform:translateX(0),   visibility:visible
+  // NO inline styles ever written by JS — CSS owns everything
+  // ═══════════════════════════════════════════════════════════════
+
+  (function() {
+    const drawer  = document.getElementById('mobileDrawer');
+    const overlay = document.getElementById('mobileOverlay');
+    const burger  = document.getElementById('hamburger');
+    const closeBtn = document.getElementById('drawerCloseBtn');
+
+    // Defensive: if elements don't exist, stop
+    if (!drawer || !overlay || !burger) return;
+
+    function open() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      burger.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+      burger.setAttribute('aria-label', 'Close navigation menu');
+      burger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden'; // stop page scrolling behind drawer
+    }
+
+    function close() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      burger.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      burger.setAttribute('aria-label', 'Open navigation menu');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // Expose close globally so onclick attributes in HTML can call it
+    window.closeMobileNav = close;
+
+    // 1. Hamburger button toggles open/close
+    burger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      drawer.classList.contains('open') ? close() : open();
+    });
+
+    // 2. Tapping the dark overlay closes drawer
+    overlay.addEventListener('click', close);
+
+    // 3. Explicit close (×) button inside drawer
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    // 4. Escape key closes drawer
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) close();
+    });
+
+    // 5. Clicking anywhere on the page outside the drawer closes it
+    document.addEventListener('click', function(e) {
+      if (!drawer.classList.contains('open')) return;
+      if (!drawer.contains(e.target) && !burger.contains(e.target)) close();
+    });
+
+    // 6. When a nav link is tapped and the page scrolls to a section, close
+    window.addEventListener('hashchange', close);
+
+    // 7. If user rotates device or resizes to desktop width, close drawer
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        if (window.innerWidth > 768) close();
+      }, 120);
+    });
+
+    // 8. On initial page load — guarantee drawer is closed
+    //    (handles browser back/forward cache restoring open state)
+    window.addEventListener('pageshow', function(e) {
+      close(); // close mobile nav on back/forward navigation
+      // Also re-trigger reveal for any elements that missed the observer
+      if (window.innerWidth <= 768) {
+        document.querySelectorAll('.reveal').forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    });
+    close(); // immediate call on script execution
+
+  })();
+
+  // iOS Safari — fix 100vh issue (Safari includes browser chrome in 100vh)
+  function setMobileVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+  }
+  setMobileVH();
+  window.addEventListener('resize', setMobileVH);
+
+  // ── Navbar ──
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ── SCROLL REVEAL — Progressive Enhancement ──
+  // Content is visible by default. This function OPTIONALLY adds
+  // the animation class to <html>, then uses IntersectionObserver
+  // to reveal elements as they scroll into view.
+  // On mobile or if anything goes wrong: content stays visible. Always.
+  (function initReveal() {
+
+    // Only activate scroll animations on desktop (>768px)
+    // On mobile (iPhone, Android) — do nothing. Content already visible.
+    var isMobile = window.innerWidth <= 768 ||
+                   /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) return;
+
+    // Only activate if IntersectionObserver is available
+    if (!('IntersectionObserver' in window)) return;
+
+    // Only activate if user hasn't requested reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    // ── Safe to animate ──
+    // Add the class that triggers CSS to hide elements (progressive enhancement)
+    document.documentElement.classList.add('js-animations-ready');
+
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      obs.observe(el);
+    });
+
+    // Safety net: 4 seconds after animations enabled, force-show anything
+    // still hidden (e.g. elements that were already in viewport on load)
+    setTimeout(function() {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }, 4000);
+
+  })();
+
+  // ── iOS Safari bfcache fix ──
+  // When iOS restores a page from back/forward cache, re-check visibility
+  // Remove the animation class entirely on bfcache restore — show all content
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+      // Page was restored from bfcache (iOS Safari back/forward)
+      // Remove animation class so CSS reverts to default visible state
+      document.documentElement.classList.remove('js-animations-ready');
+      // Ensure all reveal elements are marked visible too
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }
+  });
+
+  // ── Character counter for message field ──
+  const msgField = document.getElementById('f-message');
+  const charCount = document.getElementById('charCount');
+  if (msgField && charCount) {
+    msgField.addEventListener('input', () => {
+      charCount.textContent = msgField.value.length;
+      charCount.style.color = msgField.value.length > 1800 ? '#C0392B' : '';
+    });
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // SECURITY UTILITIES
+  // ═══════════════════════════════════════════════════════════════
+
+  /**
+   * sanitise() — Strips all HTML tags and dangerous characters from input.
+   * Prevents XSS (Cross-Site Scripting) attacks where someone tries
+   * to inject malicious code into the form fields.
+   */
+  function sanitise(str) {
+    if (typeof str !== 'string') return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;')
+      .replace(/\//g, '&#x2F;')
+      .replace(/\\/g, '&#x5C;')
+      .replace(/`/g, '&#96;')
+      .trim();
+  }
+
+  /**
+   * stripScripts() — Extra layer: removes any script tags or JS event
+   * handlers even if they slipped past sanitise().
+   */
+  function stripScripts(str) {
+    return str
+      .replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, '')
+      .replace(/on\w+\s*=\s*["'][^"']*["']/gi, '')
+      .replace(/javascript:/gi, '')
+      .replace(/data:/gi, '');
+  }
+
+  /**
+   * Full clean pipeline — run every user input through this before
+   * sending or using it anywhere.
+   */
+  function cleanInput(str) {
+    return stripScripts(sanitise(String(str || '').trim()));
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // VALIDATION RULES
+  // ═══════════════════════════════════════════════════════════════
+
+  const RULES = {
+    /**
+     * Name: letters, spaces, hyphens, apostrophes, dots only.
+     * Minimum 2 characters, maximum 100. No numbers, no symbols.
+     * Rejects: "John123", "<script>", "!@#$"
+     */
+    name: {
+      regex:   /^[a-zA-Z\u00C0-\u024F\s'\-\.]{2,100}$/,
+      message: 'Please enter your full name (letters only, 2–100 characters)'
+    },
+
+    /**
+     * Email: strict RFC-5321 compliant check.
+     * Must have: local@domain.tld
+     * Rejects: "test@", "@domain.com", "notanemail", "a@b.c" (TLD too short)
+     * Accepts international domains.
+     */
+    email: {
+      regex:   /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/,
+      message: 'Please enter a valid email address (e.g. name@company.com)',
+      extra: (val) => {
+        // Additional checks the regex alone can't catch
+        if (val.length > 254)          return false; // RFC 5321 max
+        if (val.split('@').length > 2) return false; // multiple @ signs
+        const [local, domain] = val.split('@');
+        if (local.length > 64)         return false; // RFC local part max
+        if (domain.startsWith('.') || domain.endsWith('.')) return false;
+        if (domain.includes('..'))     return false;
+        return true;
+      }
+    },
+
+    /**
+     * Phone: international format.
+     * Must start with + and country code.
+     * Accepts spaces, dashes, parentheses between digits.
+     * Min 7 digits, max 15 digits (ITU-T E.164 standard).
+     * Rejects: "abc", "123", "phone number", pure text
+     */
+    phone: {
+      regex:   /^\+?[1-9]\d{0,3}[\s\-\.]?\(?\d{1,4}\)?[\s\-\.]?\d{1,4}[\s\-\.]?\d{1,9}$/,
+      message: 'Please enter a valid phone number with country code (e.g. +971 50 123 4567)',
+      extra: (val) => {
+        const digitsOnly = val.replace(/\D/g, '');
+        return digitsOnly.length >= 7 && digitsOnly.length <= 15;
+      }
+    },
+
+    /**
+     * Message: must be meaningful. Min 20 chars to prevent "hi" / "test".
+     * Max 2000 chars (enforced by maxlength attribute too).
+     * Blocks suspicious content like SQL injection patterns.
+     */
+    message: {
+      regex:   /^[\s\S]{20,2000}$/,
+      message: 'Please enter a message (minimum 20 characters, maximum 2000)',
+      extra: (val) => {
+        // Block obvious SQL injection attempts
+        const sqlPatterns = /(\bSELECT\b|\bDROP\b|\bINSERT\b|\bUPDATE\b|\bDELETE\b|\bUNION\b|\bEXEC\b)/i;
+        // Block repeated characters (e.g. "aaaaaaaaaa") — likely spam
+        const spamPattern = /(.)\1{20,}/;
+        if (sqlPatterns.test(val)) return false;
+        if (spamPattern.test(val))  return false;
+        return true;
+      }
+    },
+
+    /**
+     * Select fields: must not be empty or the placeholder value
+     */
+    select: {
+      regex:   /.+/,
+      message: 'Please make a selection'
+    }
+  };
+
+  // ═══════════════════════════════════════════════════════════════
+  // RATE LIMITING — Prevents bots from hammering the form
+  // Allows max 3 submissions per 60-second window
+  // ═══════════════════════════════════════════════════════════════
+
+  const RATE_LIMIT = { max: 3, windowMs: 60000 };
+  let submitLog = []; // timestamps of recent submissions
+
+  function isRateLimited() {
+    const now = Date.now();
+    // Clear entries older than the window
+    submitLog = submitLog.filter(t => now - t < RATE_LIMIT.windowMs);
+    return submitLog.length >= RATE_LIMIT.max;
+  }
+
+  function recordSubmission() {
+    submitLog.push(Date.now());
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FIELD VALIDATION HELPERS — Real-time feedback as user types
+  // ═══════════════════════════════════════════════════════════════
+
+  function setFieldState(fieldEl, errEl, isValid, message) {
+    if (isValid) {
+      fieldEl.classList.remove('error');
+      fieldEl.classList.add('ok');
+      errEl.classList.remove('visible');
+      errEl.textContent = '';
+    } else {
+      fieldEl.classList.remove('ok');
+      fieldEl.classList.add('error');
+      errEl.textContent = '⚠ ' + message;
+      errEl.classList.add('visible');
+    }
+    return isValid;
+  }
+
+  function validateField(id, ruleKey, errId) {
+    const el  = document.getElementById(id);
+    const err = document.getElementById(errId);
+    if (!el || !err) return true;
+
+    const val  = el.value.trim();
+    const rule = RULES[ruleKey];
+
+    if (!val) {
+      return setFieldState(el, err, false, rule.message);
+    }
+
+    const regexOk = rule.regex.test(val);
+    const extraOk = rule.extra ? rule.extra(val) : true;
+
+    return setFieldState(el, err, regexOk && extraOk, rule.message);
+  }
+
+  // Wire up real-time validation (blur = when user leaves the field)
+  document.addEventListener('DOMContentLoaded', () => {
+    const fieldMap = [
+      { id: 'f-name',     rule: 'name',    err: 'err-name'     },
+      { id: 'f-phone',    rule: 'phone',   err: 'err-phone'    },
+      { id: 'f-message',  rule: 'message', err: 'err-message'  },
+    ];
+
+    fieldMap.forEach(({ id, rule, err }) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      // Validate when user leaves the field
+      el.addEventListener('blur', () => validateField(id, rule, err));
+      // Clear error as soon as user starts correcting
+      el.addEventListener('input', () => {
+        if (el.classList.contains('error')) validateField(id, rule, err);
+      });
+    });
+
+    // Business select validates on change
+    const bizEl = document.getElementById('f-business');
+    if (bizEl) {
+      bizEl.addEventListener('change', () => {
+        const err = document.getElementById('err-business');
+        setFieldState(bizEl, err, bizEl.value !== '', 'Please select a business area');
+      });
+    }
+    // Country dropdown validation is handled by the custom dropdown controller above
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // FORMSPREE INTEGRATION
+  // IMPORTANT: Replace YOUR_FORMSPREE_ID below with the ID from
+  // formspree.io — it will look like: xyzabc12
+  // ═══════════════════════════════════════════════════════════════
+  const FORMSPREE_ID = 'mreoggrz'; // ← REPLACE THIS
+
+  async function submitForm() {
+    // ── 1. HONEYPOT CHECK — If bot filled the hidden field, silently reject ──
+    const honeypot = document.getElementById('hp-website');
+    if (honeypot && honeypot.value !== '') {
+      // Bot detected — fake success so bot doesn't try again
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      return;
+    }
+
+    // ── 2. RATE LIMIT CHECK ──
+    if (isRateLimited()) {
+      document.getElementById('rateWarning').classList.add('visible');
+      return;
+    }
+    document.getElementById('rateWarning').classList.remove('visible');
+
+    // ── 3. VALIDATE ALL FIELDS ──
+    const results = [
+      validateField('f-name',    'name',    'err-name'),
+      validateField('f-phone',   'phone',   'err-phone'),
+      validateField('f-message', 'message', 'err-message'),
+    ];
+
+    // Validate selects
+    // Country validation uses the hidden field (set by the custom searchable dropdown)
+    const countryOk  = validateCountry();
+
+    const businessEl = document.getElementById('f-business');
+    const errBusiness = document.getElementById('err-business');
+    const businessOk = setFieldState(businessEl, errBusiness, businessEl.value !== '', 'Please select a business area');
+
+    results.push(countryOk, businessOk);
+
+    if (results.includes(false)) {
+      // Scroll to the first error
+      const firstError = document.querySelector('.form-input.error, .form-select.error, .form-textarea.error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // ── 4. SANITISE ALL VALUES before sending ──
+    const name    = cleanInput(document.getElementById('f-name').value);
+    const phone   = cleanInput(document.getElementById('f-phone').value);
+    const country = cleanInput(document.getElementById('f-country').value);
+    const biz     = cleanInput(businessEl.value);
+    const company = cleanInput(document.getElementById('f-company').value || 'Not provided');
+    const msg     = cleanInput(document.getElementById('f-message').value);
+
+    // ── 5. FINAL SANITY CHECK on lengths after cleaning ──
+    if (name.length < 2 || email.length < 5 || phone.replace(/\D/g,'').length < 7 || msg.length < 20) {
+      return; // Should never reach here if validation passed, but safety net
+    }
+
+    // ── 6. SHOW LOADING STATE ──
+    const btn = document.getElementById('submitBtn');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+
+    // ── 7. SEND TO FORMSPREE ──
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method:  'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept':       'application/json'
+        },
+        body: JSON.stringify({
+          'Full Name':        name,
+          'Phone':            phone,
+          'Company':          company,
+          'Country':          country,
+          'Business Enquiry': biz,
+          'Message':          msg,
+          '_subject':         `New Enquiry — ${biz} — ${name}`
+        })
+      });
+
+      if (response.ok) {
+        // Record this submission for rate limiting
+        recordSubmission();
+        // Show success
+        document.getElementById('formContent').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        const data = await response.json();
+        btn.textContent = data.error || 'Submission failed — please try again';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.background = '#C0392B';
+        btn.style.borderColor = '#C0392B';
+      }
+    } catch (err) {
+      btn.textContent = 'Network error — please check your connection';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      btn.textContent = originalText;
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // COUNTRY SEARCHABLE DROPDOWN — All 195 UN-recognised countries
+  // ═══════════════════════════════════════════════════════════════
+
+  // Priority countries shown at the top (relevant to UAE business)
+  const PRIORITY_COUNTRIES = [
+    { name: 'United Arab Emirates', flag: '🇦🇪' },
+    { name: 'Saudi Arabia',         flag: '🇸🇦' },
+    { name: 'Qatar',                flag: '🇶🇦' },
+    { name: 'Kuwait',               flag: '🇰🇼' },
+    { name: 'Bahrain',              flag: '🇧🇭' },
+    { name: 'Oman',                 flag: '🇴🇲' },
+    { name: 'India',                flag: '🇮🇳' },
+    { name: 'Pakistan',             flag: '🇵🇰' },
+    { name: 'United Kingdom',       flag: '🇬🇧' },
+    { name: 'United States',        flag: '🇺🇸' },
+  ];
+
+  // All 195 countries (alphabetical)
+  const ALL_COUNTRIES = [
+    { name: 'Afghanistan',                           flag: '🇦🇫' },
+    { name: 'Albania',                               flag: '🇦🇱' },
+    { name: 'Algeria',                               flag: '🇩🇿' },
+    { name: 'Andorra',                               flag: '🇦🇩' },
+    { name: 'Angola',                                flag: '🇦🇴' },
+    { name: 'Antigua and Barbuda',                   flag: '🇦🇬' },
+    { name: 'Argentina',                             flag: '🇦🇷' },
+    { name: 'Armenia',                               flag: '🇦🇲' },
+    { name: 'Australia',                             flag: '🇦🇺' },
+    { name: 'Austria',                               flag: '🇦🇹' },
+    { name: 'Azerbaijan',                            flag: '🇦🇿' },
+    { name: 'Bahamas',                               flag: '🇧🇸' },
+    { name: 'Bahrain',                               flag: '🇧🇭' },
+    { name: 'Bangladesh',                            flag: '🇧🇩' },
+    { name: 'Barbados',                              flag: '🇧🇧' },
+    { name: 'Belarus',                               flag: '🇧🇾' },
+    { name: 'Belgium',                               flag: '🇧🇪' },
+    { name: 'Belize',                                flag: '🇧🇿' },
+    { name: 'Benin',                                 flag: '🇧🇯' },
+    { name: 'Bhutan',                                flag: '🇧🇹' },
+    { name: 'Bolivia',                               flag: '🇧🇴' },
+    { name: 'Bosnia and Herzegovina',                flag: '🇧🇦' },
+    { name: 'Botswana',                              flag: '🇧🇼' },
+    { name: 'Brazil',                                flag: '🇧🇷' },
+    { name: 'Brunei',                                flag: '🇧🇳' },
+    { name: 'Bulgaria',                              flag: '🇧🇬' },
+    { name: 'Burkina Faso',                          flag: '🇧🇫' },
+    { name: 'Burundi',                               flag: '🇧🇮' },
+    { name: 'Cabo Verde',                            flag: '🇨🇻' },
+    { name: 'Cambodia',                              flag: '🇰🇭' },
+    { name: 'Cameroon',                              flag: '🇨🇲' },
+    { name: 'Canada',                                flag: '🇨🇦' },
+    { name: 'Central African Republic',              flag: '🇨🇫' },
+    { name: 'Chad',                                  flag: '🇹🇩' },
+    { name: 'Chile',                                 flag: '🇨🇱' },
+    { name: 'China',                                 flag: '🇨🇳' },
+    { name: 'Colombia',                              flag: '🇨🇴' },
+    { name: 'Comoros',                               flag: '🇰🇲' },
+    { name: 'Congo (Brazzaville)',                   flag: '🇨🇬' },
+    { name: 'Congo (Kinshasa)',                      flag: '🇨🇩' },
+    { name: 'Costa Rica',                            flag: '🇨🇷' },
+    { name: "Côte d'Ivoire",                         flag: '🇨🇮' },
+    { name: 'Croatia',                               flag: '🇭🇷' },
+    { name: 'Cuba',                                  flag: '🇨🇺' },
+    { name: 'Cyprus',                                flag: '🇨🇾' },
+    { name: 'Czech Republic',                        flag: '🇨🇿' },
+    { name: 'Denmark',                               flag: '🇩🇰' },
+    { name: 'Djibouti',                              flag: '🇩🇯' },
+    { name: 'Dominica',                              flag: '🇩🇲' },
+    { name: 'Dominican Republic',                    flag: '🇩🇴' },
+    { name: 'Ecuador',                               flag: '🇪🇨' },
+    { name: 'Egypt',                                 flag: '🇪🇬' },
+    { name: 'El Salvador',                           flag: '🇸🇻' },
+    { name: 'Equatorial Guinea',                     flag: '🇬🇶' },
+    { name: 'Eritrea',                               flag: '🇪🇷' },
+    { name: 'Estonia',                               flag: '🇪🇪' },
+    { name: 'Eswatini',                              flag: '🇸🇿' },
+    { name: 'Ethiopia',                              flag: '🇪🇹' },
+    { name: 'Fiji',                                  flag: '🇫🇯' },
+    { name: 'Finland',                               flag: '🇫🇮' },
+    { name: 'France',                                flag: '🇫🇷' },
+    { name: 'Gabon',                                 flag: '🇬🇦' },
+    { name: 'Gambia',                                flag: '🇬🇲' },
+    { name: 'Georgia',                               flag: '🇬🇪' },
+    { name: 'Germany',                               flag: '🇩🇪' },
+    { name: 'Ghana',                                 flag: '🇬🇭' },
+    { name: 'Greece',                                flag: '🇬🇷' },
+    { name: 'Grenada',                               flag: '🇬🇩' },
+    { name: 'Guatemala',                             flag: '🇬🇹' },
+    { name: 'Guinea',                                flag: '🇬🇳' },
+    { name: 'Guinea-Bissau',                         flag: '🇬🇼' },
+    { name: 'Guyana',                                flag: '🇬🇾' },
+    { name: 'Haiti',                                 flag: '🇭🇹' },
+    { name: 'Honduras',                              flag: '🇭🇳' },
+    { name: 'Hungary',                               flag: '🇭🇺' },
+    { name: 'Iceland',                               flag: '🇮🇸' },
+    { name: 'India',                                 flag: '🇮🇳' },
+    { name: 'Indonesia',                             flag: '🇮🇩' },
+    { name: 'Iran',                                  flag: '🇮🇷' },
+    { name: 'Iraq',                                  flag: '🇮🇶' },
+    { name: 'Ireland',                               flag: '🇮🇪' },
+    { name: 'Israel',                                flag: '🇮🇱' },
+    { name: 'Italy',                                 flag: '🇮🇹' },
+    { name: 'Jamaica',                               flag: '🇯🇲' },
+    { name: 'Japan',                                 flag: '🇯🇵' },
+    { name: 'Jordan',                                flag: '🇯🇴' },
+    { name: 'Kazakhstan',                            flag: '🇰🇿' },
+    { name: 'Kenya',                                 flag: '🇰🇪' },
+    { name: 'Kiribati',                              flag: '🇰🇮' },
+    { name: 'Kosovo',                                flag: '🇽🇰' },
+    { name: 'Kuwait',                                flag: '🇰🇼' },
+    { name: 'Kyrgyzstan',                            flag: '🇰🇬' },
+    { name: 'Laos',                                  flag: '🇱🇦' },
+    { name: 'Latvia',                                flag: '🇱🇻' },
+    { name: 'Lebanon',                               flag: '🇱🇧' },
+    { name: 'Lesotho',                               flag: '🇱🇸' },
+    { name: 'Liberia',                               flag: '🇱🇷' },
+    { name: 'Libya',                                 flag: '🇱🇾' },
+    { name: 'Liechtenstein',                         flag: '🇱🇮' },
+    { name: 'Lithuania',                             flag: '🇱🇹' },
+    { name: 'Luxembourg',                            flag: '🇱🇺' },
+    { name: 'Madagascar',                            flag: '🇲🇬' },
+    { name: 'Malawi',                                flag: '🇲🇼' },
+    { name: 'Malaysia',                              flag: '🇲🇾' },
+    { name: 'Maldives',                              flag: '🇲🇻' },
+    { name: 'Mali',                                  flag: '🇲🇱' },
+    { name: 'Malta',                                 flag: '🇲🇹' },
+    { name: 'Marshall Islands',                      flag: '🇲🇭' },
+    { name: 'Mauritania',                            flag: '🇲🇷' },
+    { name: 'Mauritius',                             flag: '🇲🇺' },
+    { name: 'Mexico',                                flag: '🇲🇽' },
+    { name: 'Micronesia',                            flag: '🇫🇲' },
+    { name: 'Moldova',                               flag: '🇲🇩' },
+    { name: 'Monaco',                                flag: '🇲🇨' },
+    { name: 'Mongolia',                              flag: '🇲🇳' },
+    { name: 'Montenegro',                            flag: '🇲🇪' },
+    { name: 'Morocco',                               flag: '🇲🇦' },
+    { name: 'Mozambique',                            flag: '🇲🇿' },
+    { name: 'Myanmar',                               flag: '🇲🇲' },
+    { name: 'Namibia',                               flag: '🇳🇦' },
+    { name: 'Nauru',                                 flag: '🇳🇷' },
+    { name: 'Nepal',                                 flag: '🇳🇵' },
+    { name: 'Netherlands',                           flag: '🇳🇱' },
+    { name: 'New Zealand',                           flag: '🇳🇿' },
+    { name: 'Nicaragua',                             flag: '🇳🇮' },
+    { name: 'Niger',                                 flag: '🇳🇪' },
+    { name: 'Nigeria',                               flag: '🇳🇬' },
+    { name: 'North Korea',                           flag: '🇰🇵' },
+    { name: 'North Macedonia',                       flag: '🇲🇰' },
+    { name: 'Norway',                                flag: '🇳🇴' },
+    { name: 'Oman',                                  flag: '🇴🇲' },
+    { name: 'Pakistan',                              flag: '🇵🇰' },
+    { name: 'Palau',                                 flag: '🇵🇼' },
+    { name: 'Palestine',                             flag: '🇵🇸' },
+    { name: 'Panama',                                flag: '🇵🇦' },
+    { name: 'Papua New Guinea',                      flag: '🇵🇬' },
+    { name: 'Paraguay',                              flag: '🇵🇾' },
+    { name: 'Peru',                                  flag: '🇵🇪' },
+    { name: 'Philippines',                           flag: '🇵🇭' },
+    { name: 'Poland',                                flag: '🇵🇱' },
+    { name: 'Portugal',                              flag: '🇵🇹' },
+    { name: 'Qatar',                                 flag: '🇶🇦' },
+    { name: 'Romania',                               flag: '🇷🇴' },
+    { name: 'Russia',                                flag: '🇷🇺' },
+    { name: 'Rwanda',                                flag: '🇷🇼' },
+    { name: 'Saint Kitts and Nevis',                 flag: '🇰🇳' },
+    { name: 'Saint Lucia',                           flag: '🇱🇨' },
+    { name: 'Saint Vincent and the Grenadines',      flag: '🇻🇨' },
+    { name: 'Samoa',                                 flag: '🇼🇸' },
+    { name: 'San Marino',                            flag: '🇸🇲' },
+    { name: 'São Tomé and Príncipe',                 flag: '🇸🇹' },
+    { name: 'Saudi Arabia',                          flag: '🇸🇦' },
+    { name: 'Senegal',                               flag: '🇸🇳' },
+    { name: 'Serbia',                                flag: '🇷🇸' },
+    { name: 'Seychelles',                            flag: '🇸🇨' },
+    { name: 'Sierra Leone',                          flag: '🇸🇱' },
+    { name: 'Singapore',                             flag: '🇸🇬' },
+    { name: 'Slovakia',                              flag: '🇸🇰' },
+    { name: 'Slovenia',                              flag: '🇸🇮' },
+    { name: 'Solomon Islands',                       flag: '🇸🇧' },
+    { name: 'Somalia',                               flag: '🇸🇴' },
+    { name: 'South Africa',                          flag: '🇿🇦' },
+    { name: 'South Korea',                           flag: '🇰🇷' },
+    { name: 'South Sudan',                           flag: '🇸🇸' },
+    { name: 'Spain',                                 flag: '🇪🇸' },
+    { name: 'Sri Lanka',                             flag: '🇱🇰' },
+    { name: 'Sudan',                                 flag: '🇸🇩' },
+    { name: 'Suriname',                              flag: '🇸🇷' },
+    { name: 'Sweden',                                flag: '🇸🇪' },
+    { name: 'Switzerland',                           flag: '🇨🇭' },
+    { name: 'Syria',                                 flag: '🇸🇾' },
+    { name: 'Taiwan',                                flag: '🇹🇼' },
+    { name: 'Tajikistan',                            flag: '🇹🇯' },
+    { name: 'Tanzania',                              flag: '🇹🇿' },
+    { name: 'Thailand',                              flag: '🇹🇭' },
+    { name: 'Timor-Leste',                           flag: '🇹🇱' },
+    { name: 'Togo',                                  flag: '🇹🇬' },
+    { name: 'Tonga',                                 flag: '🇹🇴' },
+    { name: 'Trinidad and Tobago',                   flag: '🇹🇹' },
+    { name: 'Tunisia',                               flag: '🇹🇳' },
+    { name: 'Turkey',                                flag: '🇹🇷' },
+    { name: 'Turkmenistan',                          flag: '🇹🇲' },
+    { name: 'Tuvalu',                                flag: '🇹🇻' },
+    { name: 'Uganda',                                flag: '🇺🇬' },
+    { name: 'Ukraine',                               flag: '🇺🇦' },
+    { name: 'United Arab Emirates',                  flag: '🇦🇪' },
+    { name: 'United Kingdom',                        flag: '🇬🇧' },
+    { name: 'United States',                         flag: '🇺🇸' },
+    { name: 'Uruguay',                               flag: '🇺🇾' },
+    { name: 'Uzbekistan',                            flag: '🇺🇿' },
+    { name: 'Vanuatu',                               flag: '🇻🇺' },
+    { name: 'Vatican City',                          flag: '🇻🇦' },
+    { name: 'Venezuela',                             flag: '🇻🇪' },
+    { name: 'Vietnam',                               flag: '🇻🇳' },
+    { name: 'Yemen',                                 flag: '🇾🇪' },
+    { name: 'Zambia',                                flag: '🇿🇲' },
+    { name: 'Zimbabwe',                              flag: '🇿🇼' },
+  ];
+
+  // Build a set of priority names for deduplication
+  const PRIORITY_NAMES = new Set(PRIORITY_COUNTRIES.map(c => c.name));
+
+  // ── Country Dropdown Controller ──
+  (function initCountryDropdown() {
+
+    const searchInput  = document.getElementById('f-country-search');
+    const hiddenInput  = document.getElementById('f-country');
+    const dropdown     = document.getElementById('countryDropdown');
+    const listInner    = document.getElementById('countryList');
+    const errEl        = document.getElementById('err-country');
+    const icon         = document.getElementById('countryIcon');
+
+    if (!searchInput || !dropdown || !listInner) return;
+
+    let highlightedIndex = -1;
+    let currentItems     = [];
+    let isOpen           = false;
+    let selectedValue    = '';
+
+    // Highlight matched text in the option label
+    function highlight(text, query) {
+      if (!query) return text;
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp('(' + escaped + ')', 'gi');
+      return text.replace(re, '<span class="match-highlight">$1</span>');
+    }
+
+    // Render the dropdown list based on search query
+    function renderList(query) {
+      listInner.innerHTML = '';
+      highlightedIndex = -1;
+      currentItems = [];
+
+      const q = (query || '').trim().toLowerCase();
+
+      // Filter helper
+      function matches(name) {
+        return name.toLowerCase().includes(q);
+      }
+
+      // When no search query: show priority group first, then rest
+      if (!q) {
+        // Priority group header
+        const grpEl = document.createElement('div');
+        grpEl.className = 'country-group-label';
+        grpEl.textContent = 'Frequently Selected';
+        listInner.appendChild(grpEl);
+
+        PRIORITY_COUNTRIES.forEach(c => {
+          currentItems.push(c);
+          listInner.appendChild(makeOption(c, q));
+        });
+
+        const grpEl2 = document.createElement('div');
+        grpEl2.className = 'country-group-label';
+        grpEl2.textContent = 'All Countries A–Z';
+        listInner.appendChild(grpEl2);
+
+        ALL_COUNTRIES.filter(c => !PRIORITY_NAMES.has(c.name)).forEach(c => {
+          currentItems.push(c);
+          listInner.appendChild(makeOption(c, q));
+        });
+
+      } else {
+        // Search mode: show all matches across both lists (deduplicated)
+        const seen = new Set();
+        const results = [];
+
+        // Priority countries first if they match
+        PRIORITY_COUNTRIES.filter(c => matches(c.name) && !seen.has(c.name)).forEach(c => {
+          seen.add(c.name); results.push(c);
+        });
+        // Then rest
+        ALL_COUNTRIES.filter(c => matches(c.name) && !seen.has(c.name)).forEach(c => {
+          seen.add(c.name); results.push(c);
+        });
+
+        if (results.length === 0) {
+          const noRes = document.createElement('div');
+          noRes.className = 'country-no-results';
+          noRes.textContent = 'No country found for "' + query + '"';
+          listInner.appendChild(noRes);
+          return;
+        }
+
+        results.forEach(c => {
+          currentItems.push(c);
+          listInner.appendChild(makeOption(c, q));
+        });
+      }
+    }
+
+    // Build a single option element
+    function makeOption(country, query) {
+      const el = document.createElement('div');
+      el.className = 'country-option' + (country.name === selectedValue ? ' selected' : '');
+      el.setAttribute('role', 'option');
+      el.setAttribute('data-value', country.name);
+      el.innerHTML = `<span class="country-flag">${country.flag}</span><span>${highlight(country.name, query)}</span>`;
+
+      el.addEventListener('mousedown', (e) => {
+        e.preventDefault(); // prevent input blur before selection
+        selectCountry(country.name, country.flag);
+      });
+      el.addEventListener('mouseover', () => {
+        setHighlight(currentItems.findIndex(c => c.name === country.name));
+      });
+      return el;
+    }
+
+    // Set keyboard highlight
+    function setHighlight(idx) {
+      const items = listInner.querySelectorAll('.country-option');
+      items.forEach(el => el.classList.remove('highlighted'));
+      highlightedIndex = idx;
+      if (idx >= 0 && items[idx]) {
+        items[idx].classList.add('highlighted');
+        items[idx].scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    // Select a country
+    function selectCountry(name, flag) {
+      selectedValue          = name;
+      hiddenInput.value      = name;
+      searchInput.value      = flag + '  ' + name;
+      searchInput.setAttribute('aria-expanded', 'false');
+
+      // Clear error
+      searchInput.classList.remove('error');
+      searchInput.classList.add('ok');
+      errEl.classList.remove('visible');
+
+      closeDropdown();
+    }
+
+    // Open / close
+    function openDropdown() {
+      isOpen = true;
+      dropdown.classList.add('open');
+      searchInput.setAttribute('aria-expanded', 'true');
+      // If a country is already selected, clear input for searching
+      if (selectedValue) searchInput.select();
+      renderList(selectedValue ? '' : searchInput.value);
+    }
+
+    function closeDropdown() {
+      isOpen = false;
+      dropdown.classList.remove('open');
+      searchInput.setAttribute('aria-expanded', 'false');
+
+      // If user typed but didn't select a valid country, restore selected or clear
+      if (selectedValue) {
+        const found = [...PRIORITY_COUNTRIES, ...ALL_COUNTRIES].find(c => c.name === selectedValue);
+        if (found) searchInput.value = found.flag + '  ' + found.name;
+      } else {
+        // Check if typed text exactly matches a country name (case-insensitive)
+        const typed = searchInput.value.trim().toLowerCase();
+        const allList = [...PRIORITY_COUNTRIES, ...ALL_COUNTRIES];
+        const exact = allList.find(c => c.name.toLowerCase() === typed);
+        if (exact) {
+          selectCountry(exact.name, exact.flag);
+        } else if (typed !== '') {
+          // Invalid text — show error
+          searchInput.classList.add('error');
+          errEl.classList.add('visible');
+          searchInput.value = '';
+          hiddenInput.value = '';
+          selectedValue = '';
+        }
+      }
+    }
+
+    // Events
+    searchInput.addEventListener('focus', openDropdown);
+    searchInput.addEventListener('click', openDropdown);
+
+    searchInput.addEventListener('input', () => {
+      selectedValue = '';
+      hiddenInput.value = '';
+      renderList(searchInput.value);
+      if (!isOpen) openDropdown();
+    });
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', (e) => {
+      const items = listInner.querySelectorAll('.country-option');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        setHighlight(Math.min(highlightedIndex + 1, items.length - 1));
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        setHighlight(Math.max(highlightedIndex - 1, 0));
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (highlightedIndex >= 0 && currentItems[highlightedIndex]) {
+          const c = currentItems[highlightedIndex];
+          selectCountry(c.name, c.flag);
+        }
+      } else if (e.key === 'Escape') {
+        closeDropdown();
+        searchInput.blur();
+      } else if (e.key === 'Tab') {
+        closeDropdown();
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('mousedown', (e) => {
+      if (isOpen && !dropdown.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    // Override the country validation to check the hidden field
+    // (The form submit will use hiddenInput.value, not searchInput.value)
+    const origValidate = window._validateCountry;
+
+  })(); // end initCountryDropdown
+
+  // Override country validation to use the hidden input
+  function validateCountry() {
+    const hiddenInput = document.getElementById('f-country');
+    const searchInput = document.getElementById('f-country-search');
+    const errEl       = document.getElementById('err-country');
+    const isValid     = hiddenInput && hiddenInput.value.trim() !== '';
+    if (isValid) {
+      searchInput.classList.remove('error');
+      searchInput.classList.add('ok');
+      errEl.classList.remove('visible');
+    } else {
+      searchInput.classList.remove('ok');
+      searchInput.classList.add('error');
+      errEl.classList.add('visible');
+    }
+    return isValid;
+  }
+
+
+  // ═══════════════════════════════════════════════════════════════
+  // MARQUEE — Clickable items with smooth scroll + card highlight
+  // ═══════════════════════════════════════════════════════════════
+  document.querySelectorAll('.marquee-item').forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = item.getAttribute('href');
+      const target   = document.querySelector(targetId);
+      if (!target) return;
+
+      // Scroll the businesses section into view first, then the card
+      const bizSection = document.getElementById('businesses');
+      if (bizSection) {
+        bizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // After scroll settles, scroll precisely to the card and flash it
+      setTimeout(function() {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Flash highlight: add a gold border pulse, then re

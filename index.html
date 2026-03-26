@@ -55,10 +55,15 @@
     background: var(--cream);
     color: var(--charcoal);
     overflow-x: hidden;
-    cursor: none;
+    /* cursor controlled by JS — see cursor init block below */
   }
 
-  /* ── CURSOR ── */
+  /* ── CUSTOM CURSOR ──
+     Hidden until first mousemove fires (prevents sitting at 0,0 on load).
+     will-change:transform tells Chrome to GPU-accelerate these elements
+     — fixes disappearing cursor on Windows Chrome.
+     visibility:hidden used instead of display:none so transitions work.
+  */
   .cursor {
     position: fixed; top: 0; left: 0;
     width: 8px; height: 8px;
@@ -66,6 +71,9 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
+    visibility: hidden;
+    will-change: transform;
+    transform: translate(-50px, -50px);
   }
   .cursor-ring {
     position: fixed; top: 0; left: 0;
@@ -75,6 +83,18 @@
     pointer-events: none;
     z-index: 9998;
     opacity: 0.35;
+    visibility: hidden;
+    will-change: transform;
+    transform: translate(-50px, -50px);
+  }
+  /* Ensure interactive elements always show pointer cursor as backup */
+  a, button, [onclick], .marquee-item, .biz-link,
+  .btn-primary, .btn-outline, .btn-gold, .btn-outline-white,
+  .form-submit, .nav-cta, .hamburger, select, .country-search-input {
+    cursor: pointer !important;
+  }
+  input, textarea {
+    cursor: text !important;
   }
 
   /* ── NAV ── */
@@ -1530,8 +1550,7 @@
       animation: none !important;
     }
 
-    /* CURSOR — disable custom cursor on touch devices */
-    body { cursor: auto; }
+    /* CURSOR — custom cursor disabled on mobile (handled in JS initCursor) */
     .cursor, .cursor-ring { display: none; }
 
     /* NAV */
@@ -2619,16 +2638,95 @@
   // ASVEL GROUP WEBSITE — SECURITY & VALIDATION LAYER
   // ═══════════════════════════════════════════════════════════════
 
-  // ── Cursor ──
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  (function animate() {
-    cursor.style.transform = `translate(${mx-4}px, ${my-4}px)`;
-    rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
-    ring.style.transform = `translate(${rx-16}px, ${ry-16}px)`;
-    requestAnimationFrame(animate);
+  // ── Custom Cursor ──
+  // Strategy: keep real system cursor until first mousemove fires.
+  // Only THEN hide the system cursor and show the custom one.
+  // This prevents the "no cursor" flash on Windows Chrome where
+  // cursor:none in CSS hides the real cursor before JS is ready.
+  (function initCursor() {
+    const cursor = document.getElementById('cursor');
+    const ring   = document.getElementById('cursorRing');
+
+    // If elements don't exist, do nothing — system cursor stays visible
+    if (!cursor || !ring) return;
+
+    // Don't activate on touch devices (iPhone, Android, iPad)
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    if (isTouch) return;
+
+    // Don't activate on mobile/tablet screen sizes
+    if (window.innerWidth <= 1024) return;
+
+    // Don't activate if device has no fine pointer (i.e. touch/stylus only)
+    // This catches iPads with keyboard covers that report hover capability
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (!hasFinePointer) return;
+
+    let mx = 0, my = 0;   // mouse position (instant)
+    let rx = 0, ry = 0;   // ring position (lagged for smooth trail)
+    let cursorReady = false;
+
+    // First mousemove — activate custom cursor
+    function onFirstMove(e) {
+      mx = rx = e.clientX;
+      my = ry = e.clientY;
+
+      // Position both elements at cursor location before revealing
+      cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+      ring.style.transform   = `translate(${rx - 16}px, ${ry - 16}px)`;
+
+      // NOW hide system cursor and show custom ones
+      document.body.style.cursor = 'none';
+      cursor.style.visibility = 'visible';
+      ring.style.visibility   = 'visible';
+
+      cursorReady = true;
+
+      // Switch to the regular mousemove handler
+      document.removeEventListener('mousemove', onFirstMove);
+      document.addEventListener('mousemove', onMove);
+    }
+
+    function onMove(e) {
+      mx = e.clientX;
+      my = e.clientY;
+    }
+
+    // Animation loop — only runs after cursor is activated
+    function animate() {
+      if (cursorReady) {
+        cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+        // Ring lags slightly behind for a trail effect
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.transform = `translate(${rx - 16}px, ${ry - 16}px)`;
+      }
+      requestAnimationFrame(animate);
+    }
+
+    // When mouse leaves browser window — restore system cursor so user
+    // can see their cursor in the OS taskbar / other windows
+    document.addEventListener('mouseleave', function() {
+      if (cursorReady) {
+        document.body.style.cursor = 'auto';
+        cursor.style.visibility = 'hidden';
+        ring.style.visibility   = 'hidden';
+      }
+    });
+
+    // When mouse re-enters the window — hide system cursor again
+    document.addEventListener('mouseenter', function() {
+      if (cursorReady) {
+        document.body.style.cursor = 'none';
+        cursor.style.visibility = 'visible';
+        ring.style.visibility   = 'visible';
+      }
+    });
+
+    // Start listening and animating
+    document.addEventListener('mousemove', onFirstMove);
+    animate();
+
   })();
 
 
@@ -2636,15 +2734,7 @@
   // RESPONSIVE / MOBILE BEHAVIOUR
   // ═══════════════════════════════════════════════════════════════
 
-  // Detect touch device — disable custom cursor on touch
-  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
-  if (isTouchDevice) {
-    const cur = document.getElementById('cursor');
-    const rng = document.getElementById('cursorRing');
-    if (cur) cur.style.display = 'none';
-    if (rng) rng.style.display = 'none';
-    document.body.style.cursor = 'auto';
-  }
+  // Touch cursor handling moved into initCursor() above
 
   // ═══════════════════════════════════════════════════════════════
   // MOBILE NAV — Clean, CSS-only visibility, JS toggles .open only

@@ -2411,11 +2411,19 @@
         </div>
       </div>
 
+      <div class="contact-info-item reveal d1">
+        <div class="contact-info-icon">✉️</div>
+        <div>
+          <div class="contact-info-label">Email Us</div>
+          <div class="contact-info-value"><a href="mailto:info@asvelgroup.com" style="color:inherit;text-decoration:none;">info@asvelgroup.com</a></div>
+        </div>
+      </div>
+
       <div class="contact-info-item reveal d2">
         <div class="contact-info-icon">📞</div>
         <div>
           <div class="contact-info-label">Call Us</div>
-          <div class="contact-info-value">+971 4 XXX XXXX<br>Mon – Fri, 9:00 AM – 6:00 PM GST</div>
+          <div class="contact-info-value">+971 52 145 5457<br>Mon – Fri, 9:00 AM – 6:00 PM GST</div>
         </div>
       </div>
       <div class="contact-info-item reveal d3">
@@ -2475,7 +2483,21 @@
       </div>
 
       <div class="form-row">
-
+        <div class="form-group">
+          <label class="form-label" for="f-email">Email Address <span>*</span></label>
+          <input 
+            type="email" 
+            class="form-input" 
+            id="f-email" 
+            name="email"
+            placeholder="your@email.com"
+            maxlength="254"
+            autocomplete="email"
+            spellcheck="false"
+            inputmode="email"
+            required>
+          <div class="form-error-msg" id="err-email">⚠ Please enter a valid email address (e.g. name@company.com)</div>
+        </div>
         <div class="form-group">
           <label class="form-label" for="f-phone">Phone Number <span>*</span></label>
           <input 
@@ -3095,6 +3117,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const fieldMap = [
       { id: 'f-name',     rule: 'name',    err: 'err-name'     },
+      { id: 'f-email',    rule: 'email',   err: 'err-email'    },
       { id: 'f-phone',    rule: 'phone',   err: 'err-phone'    },
       { id: 'f-message',  rule: 'message', err: 'err-message'  },
     ];
@@ -3148,6 +3171,7 @@
     // ── 3. VALIDATE ALL FIELDS ──
     const results = [
       validateField('f-name',    'name',    'err-name'),
+      validateField('f-email',   'email',   'err-email'),
       validateField('f-phone',   'phone',   'err-phone'),
       validateField('f-message', 'message', 'err-message'),
     ];
@@ -3171,6 +3195,7 @@
 
     // ── 4. SANITISE ALL VALUES before sending ──
     const name    = cleanInput(document.getElementById('f-name').value);
+    const email   = cleanInput(document.getElementById('f-email').value);
     const phone   = cleanInput(document.getElementById('f-phone').value);
     const country = cleanInput(document.getElementById('f-country').value);
     const biz     = cleanInput(businessEl.value);
@@ -3199,12 +3224,14 @@
         },
         body: JSON.stringify({
           'Full Name':        name,
+          'Email':            email,
           'Phone':            phone,
           'Company':          company,
           'Country':          country,
           'Business Enquiry': biz,
           'Message':          msg,
-          '_subject':         `New Enquiry — ${biz} — ${name}`
+          '_subject':         `New Enquiry — ${biz} — ${name}`,
+          '_replyto':        email
         })
       });
 
